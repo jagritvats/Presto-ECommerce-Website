@@ -1,0 +1,52 @@
+.product{
+    width: 20vw;
+    /* margin: 1em; *//*when using swiper js*/
+    position: relative;
+    padding-bottom: 3em;
+    min-width: 200px;
+    flex-shrink: 0;
+    text-align: left;
+}
+
+.product h3{
+    font-weight: 100;
+    overflow: hidden;
+    height: max-content;
+    text-overflow: ellipsis;
+    height: 4ex;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical
+}
+
+.product h3, .numReviews{
+    font-size: 0.8em;
+}
+
+.reviewCont{
+    display: flex;
+    align-items: center;
+    margin-top: 0.4em;
+}
+
+.numReviews{
+    padding-left: 1em;
+}
+
+.priceTag{
+    font-weight: 600;
+}
+
+.product img{
+    width: 100%;
+}
+
+.product .btn{
+    position: absolute;
+    bottom: 2px;
+    left: 0px;
+}
+
+.stars >svg{
+    font-size: 0.9em;
+}

@@ -1,0 +1,106 @@
+.swiper-button-next,.swiper-button-prev{
+    background-color: white;
+    border-radius: 50%;
+    width: 4em !important;
+    height: 4em !important;
+    display: inline-block;
+}
+
+.swiper-wrapper{
+    padding-left: 4em;
+}
+
+
+.outerContainer{
+    overflow-x: hidden;
+    position: relative;
+}
+
+.innerContainer{
+    display: flex;
+    overflow-x: visible;
+    position: relative;
+    gap:2em;
+    width: max-content;
+    margin-left: 2em;
+}
+
+.nav-btn{
+    background-color: black;
+    color:white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2em;
+    position: absolute;
+    z-index: 2;
+}
+
+#prev{
+    top:50%;
+    left: 10px;
+}
+
+#nxt{
+    top: 50%;
+    right: 10px;
+}
+
+.disabled{
+    background-color: gray;
+    display: none;
+}
+
+
+@media screen and (max-width: 1280px) {
+    body {
+      background-color: lightgreen;
+    }
+
+    .outerContainer{
+        overflow-x: hidden;
+        position: relative;
+    }
+    
+    .innerContainer{
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        position: relative;
+        gap:2em;
+        width: max-content;
+        margin-left: 2em;
+    }
+
+    .product{
+        width: 28vw;
+    }
+  }
+
+@media screen and (max-width: 720px) {
+    body {
+      background-color: greenyellow;
+    }
+
+    .outerContainer{
+        position: static;
+    }
+    
+    .innerContainer{
+        flex-wrap: wrap;
+        position: static;
+        gap:1em;
+        width: 100%;
+        margin-left: 0em;
+        justify-content: center;
+    }
+
+    .product{
+        
+    }
+    .nav-btn{
+        width: 0;
+        display: none;
+    }
+}

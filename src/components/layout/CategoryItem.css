@@ -1,0 +1,18 @@
+.categoryItem {
+    padding: 0.2em;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.categoryItem:hover{
+    color: #222;
+    background-color: #eee;
+}
+
+.categoryItem img{
+    width: 230px;
+}
+
+.categoryItem p{
+    padding-top: 1em;
+}

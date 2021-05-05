@@ -1,0 +1,15 @@
+.offerItem{
+    background-color: white;
+    padding: 1em;
+}
+
+.topTitle{
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.offerItem img{
+    display: inline-block;
+    padding:0px 2vw;
+    padding-bottom: 1em;
+}
