@@ -4,19 +4,6 @@ import './Products.css';
 
 import {useSelector} from 'react-redux'
 
-// import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// SwiperCore.use([Navigation, Pagination, A11y]);
-
-// import 'swiper/swiper.scss';
-// import 'swiper/components/navigation/navigation.scss';
-// import 'swiper/components/pagination/pagination.scss';
-
-//icons
-// import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-// import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
