@@ -14,10 +14,15 @@ import {useSelector} from 'react-redux'
 // import 'swiper/components/pagination/pagination.scss';
 
 //icons
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+// import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+// import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-function Products() {
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+
+
+function Products(props) {
 
     let products = useSelector(state=>state.products)
 
@@ -35,26 +40,59 @@ function Products() {
         }
     },[scroll])
 
+    const responsive = {
+        desktop: {
+            breakpoint: { max: 3000, min: 1240 },
+            items: 4,
+            // slidesToSlide: 3 // optional, default to 1.
+        },
+        middesk: {
+            breakpoint: { max: 1240, min: 1024 },
+            items: 3,
+            // slidesToSlide: 2 // optional, default to 1.
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 720 },
+            items: 3,
+            // slidesToSlide: 2 // optional, default to 1.
+        },
+        smaller:{
+            breakpoint: { max: 720, min: 464 },
+            items: 2,
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+            slidesToSlide: 1 // optional, default to 1.
+        }
+        };
+
     return (
         <div className="products">
             <h2>Featured Products</h2>
 
-            {/* <Swiper
-                spaceBetween={0}
-                slidesPerView={4}
-                navigation
-                pagination={{ clickable: true }}
-                onSlideChange={() => console.log('slide change')}
-                // onSwiper={(swiper) => console.log(swiper)}
-                >
+
+            {/* Idea, in simple carousel have dics with 4 products and like 1st has 1-4 second has 2-5 and so on... ineffecient but worth trying out */}
+
+            <Carousel
+                draggable={true}
+                responsive={responsive}
+                keyBoardControl={true}
+                customTransition="all .5"
+                transitionDuration={100}
+                containerClass="carousel-container"
+                deviceType={props.deviceType}
+                itemClass="carousel-item-padding-40-px"
+            >
                     {
                         products.map((product)=>(
-                            <SwiperSlide key={id++}><Product product={product}/></SwiperSlide> 
+                            <Product key={id++} product={product}/>
                         ))
                     }
-            </Swiper> */}
+            </Carousel>
 
-            <div className="outerContainer">
+
+            {/* <div className="outerContainer">
                 <button className="nav-btn" id="prev" onClick={()=>{
                     let x = $(".product").width();
                     if(scroll>0){
@@ -92,6 +130,7 @@ function Products() {
                     <ArrowForwardIosIcon />
                 </button>
             </div>
+         */}
         </div>
     )
 }

@@ -1,8 +1,7 @@
-
+// if using authetication, when we bring cart then we have to update products cart prop
 const cartReducer = (state=[],action)=>{
     switch(action.type){
         case 'ADD_TO_CART':
-            let newState;
             //check if already in cart
 
             for(var i=0;i<state.length;i++){
@@ -24,6 +23,8 @@ const cartReducer = (state=[],action)=>{
             console.log("removing")
             console.log(state)
             return [...state.filter(prod=>prod.prodId!=action.payload.id)]
+
+
         default:
             return state
     }

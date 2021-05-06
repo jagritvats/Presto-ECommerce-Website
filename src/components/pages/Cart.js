@@ -18,8 +18,8 @@ function Cart() {
     return (
         <div className="cartContainer">
             <div className="cart">
-                <h1>Your cart:{qty} <span>items</span></h1>
-                <div className="container">
+                <h1> <span className="hbold">Your cart: {qty}</span>  <span>items</span></h1>
+                <div className="">
 
                 {cart.length?
                     cart.map((prod)=>(

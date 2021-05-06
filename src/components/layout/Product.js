@@ -13,7 +13,7 @@ function Product({product}) {
     return (
         <div className="product">
             <Link to={"product/" + product.prodId}>
-                <img src={product.img} alt=""/>
+                <img src={product.img} alt="" draggable="false" />
                 <h3>{product.name}</h3>
             </Link>
             

@@ -6,6 +6,7 @@
     min-width: 200px;
     flex-shrink: 0;
     text-align: left;
+    user-select: none;
 }
 
 .product h3{
@@ -13,7 +14,7 @@
     overflow: hidden;
     height: max-content;
     text-overflow: ellipsis;
-    height: 4ex;
+    height: 2.5em;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical
@@ -21,6 +22,7 @@
 
 .product h3, .numReviews{
     font-size: 0.8em;
+    word-wrap: break-word;
 }
 
 .reviewCont{
@@ -37,6 +39,7 @@
     font-weight: 600;
 }
 
+/* review this */
 .product img{
     width: 100%;
 }

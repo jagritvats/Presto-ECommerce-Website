@@ -7,27 +7,49 @@ import appleWatch from '../images/products/appleWatch.jpeg'
 const products = [
     {
         prodId:1, /*Maybe change to id */
+        model:'HTML1508/37',
         complexId:'ST102231',
         img:printerImg,
-        imgs:[],
+        imgs:[
+            printerImg,
+            // printerImg2
+            // or maybe naming convertion
+            // prod_one_img_one
+            // prod1img1
+        ],
         name:'Canon PIXMA MG2522 Wired All-in-One Color Inkjet Printer',
         description:'',  
-        maxPrice:40,
-        price:35,
-        specifications:[["weight","1"],[]],
-        reviews:[
-            {title:"Title",description:"someee",stars:4.5},
-            {title:"Title2",description:"somee222e",stars:4.0}
-        ],
-        delivery:{
-            date:""
+        maxPrice:39.99,
+        price:35.00,
+        delivery: {
+            date:new Date() //current date + 2
         },
+        specifications:[
+            ["Weight","1 lbs"],
+            ["Count",1],
+            ["Color Category","Black"]
+        ],
+        reviews:[
+            {
+                author:'Joshua',
+                title:"Title",
+                description:"Good Product!",
+                date:new Date(2021,4,29), // maybe a string date ,non functional
+                stars:4
+            },
+            {
+                title:"Title2",
+                description:"somee222e",
+                stars:4
+            }
+        ],
         stars:4, // average from looping through
-        numReviews:3124, //uppper review array length
+        numReviews:12, //uppper review array length
         category:"Electronics",/*for url category. */
-        inCart:false,
-        cartDets:{
-            quantity:0,
+
+        cartDetails:{
+            inCart:false,
+            qty:0
         }
     },
     {

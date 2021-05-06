@@ -5,26 +5,42 @@ import {useDispatch} from 'react-redux'
 
 import {removeCart} from '../../actions';
 
-import Stars from './Stars';
-
 function CartItem({product}) {
 
     const dispatch = useDispatch();
 
     return (
-        <div className="product">
+        <div className="cartItem">
             <img src={product.img} alt=""/>
             <h3>{product.name}</h3>
 
             <p className="reviewCont">
-                <span className="stars"> <Stars num={product.stars}/>  </span>
-                
-                <span className="numReviews">{product.numReviews}</span> <span>||{product.quantity}</span>
+                <span>Qty: {product.quantity}</span>
             </p>
-            <p className="priceTag">$ {parseInt(product.price).toFixed(2)}</p>
-            <button href="" className="btn" onClick={()=>{
-                dispatch(removeCart(product.prodId))
-            }}>Remove from cart</button>
+
+
+
+            <p className="rightSide"> 
+                {product.maxPrice? 
+                <span className="maxPrice">$ {parseInt(product.maxPrice).toFixed(2)} </span>
+                :
+                ""
+                }
+                <span> $ {parseInt(product.price).toFixed(2)}</span>
+                {
+                    product.quantity>1?
+                        <span className="boldPrice"> $ {parseInt(product.price).toFixed(2)*product.quantity}</span>
+                        :
+                        ""
+                }
+                
+                <a href="" onClick={(e)=>{
+                    e.preventDefault();
+                    dispatch(removeCart(product.prodId))
+                }}>Remove</a>
+            </p>
+
+            
         </div>
     )
 }

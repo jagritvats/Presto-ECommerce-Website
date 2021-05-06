@@ -1,0 +1,26 @@
+
+.cartItem{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap:1em;
+}
+
+.cartItem h3{
+    font-size: 1em;
+}
+
+.cartItem a{
+    text-decoration: underline;
+    color:black;
+}
+
+.maxPrice{
+    color:gray;
+    text-decoration: line-through;
+    font-size: 0.9em;
+}
+
+.boldPrice{
+    font-weight: 800;
+}
