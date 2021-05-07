@@ -51,7 +51,7 @@ function Navbar() {
                 )}</div>
 
                 <div className="display-flex">
-                    <div className="website-name">WallMart</div>
+                    <div className="website-name"><Link to="">WallMart</Link></div>
                     <img src={saving} alt="img"></img>
                 </div>
             </section>
@@ -66,10 +66,10 @@ function Navbar() {
             <section className="nav3">
                 <a className="display-flex mouse-pointer account"><img src={account} alt="" /><div>Account</div></a>
                 <a className="display-flex mouse-pointer fav"><img src={favorite} alt="" /><div>My Items</div></a>
-                <a className="mouse-pointer display-flex">
+                <Link to="/cart" className="mouse-pointer display-flex">
                     <img src={cartimage} alt="" />
                     <div id="noOfProducts">{qty}</div>
-                </a>
+                </Link>
             </section>
         </nav>
     )

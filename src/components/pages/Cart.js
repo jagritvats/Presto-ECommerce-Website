@@ -14,14 +14,13 @@ function Cart() {
     let qty = 0;
     let totalPrice = 0;
 
-    cart.forEach(cartItem => {
-        qty += cartItem.quantity;
-        totalPrice += cartItem.price
-    });
-
-    
 
     useEffect(()=>{
+
+        cart.forEach(cartItem => {
+            qty += cartItem.quantity;
+            totalPrice += cartItem.price
+        });
     },[cart])
 
     return (
