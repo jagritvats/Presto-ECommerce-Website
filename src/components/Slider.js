@@ -4,7 +4,7 @@ import './Slider.css'
 function Slider() {
     return (
         <div>
-            Sliddderr
+            Sliddde
         </div>
     )
 }
