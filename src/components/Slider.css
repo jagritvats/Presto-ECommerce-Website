@@ -251,38 +251,28 @@
   }}
 
   
-/* ...................................................................... */
 
 
 
-@media screen
-and (device-width: 360px)
-and (device-height: 640px){
+
+@media screen and (device-width: 360px) and (device-height: 640px){
   .sliderContent{
     margin-top: -10em;
   }
 
 }
-/* Moto G4 */
 @media screen and (device-width: 360px) and (device-height: 640px){
 .sliderContent {
     margin-top: -15.2em;
 }
 }
-/* \Moto G4 */
 
-
-/* pixel 2 */
 @media screen and (device-width: 411px) and (device-height: 731px){
   .sliderContent {
       margin-top: -18.7em;
   }
   }
-  /* \pixel * /
-
- 
-
-   /* pixel 2 XL  */
+  
 @media screen and (device-width: 411px) and (device-height: 823px){
   .sliderContent {
       margin-top: -22.5em;
@@ -290,85 +280,56 @@ and (device-height: 640px){
       
   }
   }
-  /* \pixel 2 XL  */
 
-  
-
-  /* iphone 5/SE */
   @media screen and (device-width: 320px) and (device-height: 568px){
     .sliderContent {
         margin-top: -12.5em;
     }
     }
-  /*\ iphone 5/SE */
 
-  /* iphone 6/7/8 */
   @media screen and (device-width: 375px) and (device-height: 667px){
     .sliderContent {
         margin-top: -16.1em;
     }
     }
-  /*\ iphone 6/7/8*/
-
-  /* iphone 6/7/8/plus */
+ 
   @media screen and (device-width: 414px) and (device-height: 736px){
     .sliderContent {
         margin-top: -19.1em;
     }
     }
-  /*\ iphone 6/7/8/plus */
-
-  
-  /* iphone  X*/
-  @media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
+ 
+  @media only screen and (device-width : 375px) and (device-height : 812px) 
     {
       .sliderContent {
         margin-top: -22.1em;
     }
     }
-  /*\ iphone X */
-
-  /* ipad */
-  @media only screen 
-  and (device-width : 768px) 
-  and (device-height : 1024px) 
+ 
+  @media only screen and (device-width : 768px) and (device-height : 1024px) 
   {
     .sliderContent {
       margin-top: -14.1em;
   }
   }
-  /* \ipad */
-
-  /* ipad pro*/
-  @media only screen 
-  and (device-width : 1024px) 
-  and (device-height : 1366px) 
+  
+  @media only screen and (device-width : 1024px) and (device-height : 1366px) 
   {
     .carousel__item img{
       
       height: 30vh;
   }
   }
-  /* \ipad pro*/
-  
-  /* Surface Duo*/
-  @media only screen 
-  and (device-width : 540px) 
-  and (device-height : 720px) 
+
+  @media only screen and (device-width : 540px) and (device-height : 720px) 
   {
     .sliderContent {
       margin-top: -10.1em;
       height: auto;
   }
   }
-  /*\ Surface Duo */
-  
-  /* Glaxy Fold*/
-  @media only screen 
-  and (device-width : 280px) 
-  and (device-height : 653px) 
+ 
+  @media only screen and (device-width : 280px) and (device-height : 653px) 
   {
     .sliderContent {
       margin-top: -16.1em;
