@@ -1,14 +1,22 @@
 import React,{useState,useEffect} from 'react';
-import {Link, useParams} from 'react-router-dom';
+import {Link, useParams,useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux'
 
 import Stars from '../layout/Stars'
+
+import {addCart} from '../../actions'
+
+import {useDispatch} from 'react-redux'
 
 function ProductPage() {
     let products = useSelector(state=>state.products);
 
     let params = useParams();
     let id = params.id;
+
+    let history = useHistory();
+
+    const dispatch = useDispatch()
 
     let [product,setProduct] = useState();
 
@@ -39,9 +47,10 @@ function ProductPage() {
                     <span className="numReviews">{product.numReviews}</span>
                 </p>
                 <p className="priceTag">$ {parseInt(product.price).toFixed(2)}</p>
-                <button href="" className="btn" onClick={()=>{
+                <Link href="" className="btn" onClick={()=>{
                     dispatch(addCart(product))
-                }}>Add to cart</button>
+                    history.push("/cart") 
+                }}>Add to cart</Link>
 
                 
             </div>

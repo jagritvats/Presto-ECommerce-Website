@@ -58,6 +58,7 @@ const products = [
         name:"SAMSUNG Galaxy Tab A 8.0'' 32 GB WiFi Android 9.0 Tablet Black - SM-T290NZKAXAR",
         stars:'5',
         numReviews:618,
+        categoryId: 1,
         price:132,
         category:1,
         inCart:false
@@ -69,6 +70,7 @@ const products = [
         stars:5,
         numReviews:402,
         price:499,
+        categoryId: 1,
         inCart:false
     },
     {
@@ -77,6 +79,7 @@ const products = [
         name:"VANKYO Leisure 470 Mini Wifi Projector, 250'' Large Screen and 1080P Supported LCD Home Theater Projecto",
         stars:5,
         numReviews:53,
+        categoryId: 1,
         price:109,
         inCart:false
     },
@@ -86,6 +89,7 @@ const products = [
         name:"Apple Watch Series 6 GPS, 40mm PRODUCT(RED) Aluminum Case with PRODUCT(RED) Sport Band - Regular",
         stars:5,
         numReviews:248,
+        categoryId: 1,
         price:348,
         inCart:false
     },
@@ -95,6 +99,7 @@ const products = [
         name:'Canon PIXMA MG2522 Wired All-in-One Color Inkjet Printer',
         stars:'4',
         numReviews:'3124',
+        categoryId: 1,
         price:'35',
         inCart:false
     },
@@ -104,6 +109,7 @@ const products = [
         name:"SAMSUNG Galaxy Tab A 8.0'' 32 GB WiFi Android 9.0 Tablet Black - SM-T290NZKAXAR",
         stars:'5',
         numReviews:618,
+        categoryId: 1,
         price:132,
         inCart:false
     }

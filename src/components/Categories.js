@@ -13,15 +13,16 @@ import CategoryItem from './layout/CategoryItem';
 function Categories() {
 
     let [categories, setCategories] = useState([
+        ,
         {
             id:1,
-            img:gamesImg,
-            name:'Video games',
+            img:elecImg,
+            name:'Electronics',
         },
         {
             id:2,
-            img:elecImg,
-            name:'Electronics',
+            img:gamesImg,
+            name:'Video games',
         },
         {
             id:3,
