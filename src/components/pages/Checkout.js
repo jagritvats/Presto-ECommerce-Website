@@ -6,6 +6,12 @@ function Checkout() {
         <div>
             <p>is it????? jagrit</p>
             <article>Hellos</article>
+            <div>
+                <p>Neww</p>
+            </div>
+
+
+
         </div>
     )
 }
