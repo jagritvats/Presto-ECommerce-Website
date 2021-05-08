@@ -7,7 +7,7 @@ function Checkout() {
             <p>is it????? jagrit</p>
             <article>Hellosssss</article>
             <div>
-                <p>Neww</p>
+                <p>Newwwww</p>
             </div>
 
 
