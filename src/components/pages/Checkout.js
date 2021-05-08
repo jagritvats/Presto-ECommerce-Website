@@ -8,7 +8,9 @@ function Checkout() {
             <article>Hellosssss 
                 Lorem25</article>
             <div>
-                <p>Newwwww</p>
+                <p>Newwwww
+                    sdeg
+                </p>
             </div>
 
 
