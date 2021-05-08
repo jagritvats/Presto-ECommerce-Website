@@ -108,9 +108,9 @@ function Checkout() {
                           </select>
                         </div>
                       </label>
-                      <label style={{ width: "40%" }}> CVV*: <input type="number" name="cvv" required /> </label>
+                      <label style={{ width: "40%" }}> CVV*: <input type="number" name="cvv" required min="100" max="999"  /> </label>
                     </div>
-                    <label> Phone number* (7009215892): <input type="number" name="pnumber" required /> </label>
+                    <label> Phone number* (7009215892): <input type="number" name="pnumber" required max="1000000000" max="9999999999" /> </label>
                   </div>
                 </div>
               </div>
