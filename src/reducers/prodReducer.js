@@ -4,6 +4,7 @@ import pcImg from '../images/products/HPAIO_R3TouchDesktop.jpeg'
 import projImg from '../images/products/VANKKYO470Projector.jpeg'
 import appleWatch from '../images/products/appleWatch.jpeg'
 
+// we can use delivery single object in cart , as all delivery times will be same
 const products = [
     {
         prodId:1, /*Maybe change to id */
@@ -12,10 +13,8 @@ const products = [
         img:printerImg,
         imgs:[
             printerImg,
-            // printerImg2
-            // or maybe naming convertion
+
             // prod_one_img_one
-            // prod1img1
         ],
         name:'Canon PIXMA MG2522 Wired All-in-One Color Inkjet Printer',
         description:'',  
@@ -46,7 +45,7 @@ const products = [
         stars:4, // average from looping through
         numReviews:12, //uppper review array length
         category:"Electronics",/*for url category. */
-
+        categoryId: 1,
         cartDetails:{
             inCart:false,
             qty:0
@@ -60,7 +59,7 @@ const products = [
         numReviews:618,
         categoryId: 1,
         price:132,
-        category:1,
+        category:"Electronics",
         inCart:false
     },
     {

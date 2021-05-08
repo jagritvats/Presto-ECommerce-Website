@@ -3,7 +3,10 @@
 /* Navigation Start*/
 
 .navigation  {
-    display: flex;
+    position: sticky;
+    top:0px;
+    left:0px;
+    z-index:1001;
     width: 100%;
     color: white;
     background: rgb(4,30,66);

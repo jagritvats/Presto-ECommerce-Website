@@ -7,6 +7,8 @@ import image3 from "../images/slider/image3.jpg"
 import image4 from "../images/slider/image4.jpg"
 import image5 from "../images/slider/image5.jpg"
 
+import $ from 'jquery'
+
 
 function Slider() {
 
@@ -157,34 +159,34 @@ function Slider() {
 
     return (
     <>
-         <section class="carousel">
-    <ul class="carousel__list">
+         <section className="carousel">
+    <ul className="carousel__list">
     
-      <li class="carousel__item ">
+      <li className="carousel__item ">
         <img src={image1} alt=""/>
 
-        <div class="headingp1">
-          <div class="largetitle"></div>
-          <div class="bigtitle"></div>
-          <div class="smalltitle">
+        <div className="headingp1">
+          <div className="largetitle"></div>
+          <div className="bigtitle"></div>
+          <div className="smalltitle">
 
           </div>
         </div>
       </li>
 
-      <li class="carousel__item   ">
+      <li className="carousel__item   ">
         <img src={image2} alt=""/>
 
       </li>
-      <li class="carousel__item  ">
+      <li className="carousel__item  ">
         <img src={image3} alt=""/>
 
       </li>
-      <li class="carousel__item  ">
+      <li className="carousel__item  ">
         <img src={image4} alt=""/>
 
       </li>
-      <li class="carousel__item  ">
+      <li className="carousel__item  ">
         <img src={image5} alt=""/>
 
       </li>
@@ -193,11 +195,11 @@ function Slider() {
 
   <div id="prev"> &#10094; </div>
   <div id="next"> &#10095; </div>
-  <div class="sliderContent">
-    <div class="headingp1">
-      <div class="largetitle"></div>
-      <div class="bigtitle"></div>
-       <div class="smalltitle">
+  <div className="sliderContent">
+    <div className="headingp1">
+      <div className="largetitle"></div>
+      <div className="bigtitle"></div>
+       <div className="smalltitle">
         
       </div>
     </div>

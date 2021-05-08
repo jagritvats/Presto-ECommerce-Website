@@ -15,17 +15,13 @@ function ProductPage() {
     let id = params.id;
 
     let history = useHistory();
-
     const dispatch = useDispatch()
 
     let [product,setProduct] = useState();
 
     useEffect(()=>{
-        
-
         let prod = products.find(ob => ob.prodId==id);  
         setProduct(prod)
-        console.log(prod)
     },[id])
     
     
@@ -47,10 +43,10 @@ function ProductPage() {
                     <span className="numReviews">{product.numReviews}</span>
                 </p>
                 <p className="priceTag">$ {parseInt(product.price).toFixed(2)}</p>
-                <Link href="" className="btn" onClick={()=>{
+                <button className="btn" onClick={()=>{
                     dispatch(addCart(product))
                     history.push("/cart") 
-                }}>Add to cart</Link>
+                }}>Add to cart</button>
 
                 
             </div>

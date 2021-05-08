@@ -14,13 +14,13 @@ function Cart() {
     let qty = 0;
     let totalPrice = 0;
 
+    cart.forEach(cartItem => {
+        qty += cartItem.quantity;
+        totalPrice += (cartItem.price * cartItem.quantity)
+    });
 
     useEffect(()=>{
 
-        cart.forEach(cartItem => {
-            qty += cartItem.quantity;
-            totalPrice += cartItem.price
-        });
     },[cart])
 
     return (
@@ -42,25 +42,28 @@ function Cart() {
 
                     <div className="cartSummary">
                     <table>
-                        <tr>
-                            <td>Subtotal</td>
-                            <td>$ {totalPrice}</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>$ {totalPrice}</td>
+                            </tr>
 
-                        <tr>
-                            <td>Delivery</td>
-                            <td>Free</td>
-                        </tr>
+                            <tr>
+                                <td>Delivery</td>
+                                <td>Free</td>
+                            </tr>
 
-                        <tr>
-                            <td>Taxes and fees</td>
-                            <td>--</td>
-                        </tr>
+                            <tr>
+                                <td>Taxes and fees</td>
+                                <td>--</td>
+                            </tr>
 
-                        <tr className="cartTotal">
-                            <td>Est. total</td>
-                            <td className="boldPrice">$ {totalPrice}</td>
-                        </tr>
+                            <tr className="cartTotal">
+                                <td>Est. total</td>
+                                <td className="boldPrice">$ {totalPrice}</td>
+                            </tr>
+
+                        </tbody>
                     </table>
 
                     <Link to="/checkout" className="btn btn-checkout">

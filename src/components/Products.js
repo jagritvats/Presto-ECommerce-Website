@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import Product from './layout/Product';
 import './Products.css';
 
@@ -8,15 +8,11 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 
-
 function Products(props) {
 
     let products = useSelector(state=>state.products)
 
     let id=1;
-
-    let [scroll,setScroll] = useState(0);
-
 
     const responsive = {
         desktop: {
@@ -45,9 +41,6 @@ function Products(props) {
     return (
         <div className="products">
             <h2>Featured Products</h2>
-
-
-            {/* Idea, in simple carousel have dics with 4 products and like 1st has 1-4 second has 2-5 and so on... ineffecient but worth trying out */}
 
             <Carousel
                 draggable={true}

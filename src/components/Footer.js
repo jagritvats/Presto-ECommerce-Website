@@ -4,17 +4,17 @@ import './Footer.css'
 function Footer() {
     return (
         <div >
-             <div class="icons">
-    <i class="fa fa-facebook-f"></i>
-    <i class="fa fa-instagram"></i>
-    <i class="fa fa-pinterest-p"></i>
-    <i class="fa fa-twitter"></i>
-    <i class="fa fa-youtube"></i>
+             <div className="icons">
+    <i className="fa fa-facebook-f"></i>
+    <i className="fa fa-instagram"></i>
+    <i className="fa fa-pinterest-p"></i>
+    <i className="fa fa-twitter"></i>
+    <i className="fa fa-youtube"></i>
   </div>
 
-  <div class="row">
-    <div class="column sidel">
-      <h2 class="foot set1">Our services</h2>
+  <div className="row">
+    <div className="column sidel">
+      <h2 className="foot set1">Our services</h2>
       <a href="">Delivery</a>
       <a href="">Grocery Pickup</a>
       <a href="">Money Center</a>
@@ -23,8 +23,8 @@ function Footer() {
       <a href="">Other Services</a>
     </div>
 
-    <div class="column middle">
-      <h2 class="foot set3">Customer services</h2>
+    <div className="column middle">
+      <h2 className="foot set3">Customer services</h2>
 
       <a href="">Return</a>
       <a href="">Help Center</a>
@@ -34,8 +34,8 @@ function Footer() {
       <a href="">Product Recalls</a>
     </div>
 
-    <div class="column side">
-      <h2 class="foot set2">Get to know us</h2>
+    <div className="column side">
+      <h2 className="foot set2">Get to know us</h2>
 
       <a href="">Careers</a>
       <a href="">Our Suppliers</a>
@@ -46,8 +46,8 @@ function Footer() {
     </div>
 
 
-    <div class="column sider">
-      <h2 class="foot set4">In The Spotlight</h2>
+    <div className="column sider">
+      <h2 className="foot set4">In The Spotlight</h2>
       <a href="">Skateboard</a>
       <a href="">Outdoor Furniture</a>
       <a href="">Trampoline</a>
@@ -59,11 +59,11 @@ function Footer() {
 
   </div>
   <div className="HRline"></div>
-  <div class="row2">
-    <div class="footer right">
+  <div className="row2">
+    <div className="footer right">
       © 2021 Walmart. All Rights Reserved.
     </div>
-    <div class="footer left">
+    <div className="footer left">
       To ensure we are able to help you as best we can, please include your reference number: SEOFEAPHIE
     </div>
   </div>

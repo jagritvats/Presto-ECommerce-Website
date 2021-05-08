@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 //images
 import gamesImg from '../images/categories/video_games.jpg'
@@ -12,8 +12,7 @@ import CategoryItem from './layout/CategoryItem';
 
 function Categories() {
 
-    let [categories, setCategories] = useState([
-        ,
+    const categories = [
         {
             id:1,
             img:elecImg,
@@ -44,7 +43,7 @@ function Categories() {
             img:autoImg,
             name:'Auto & Tires',
         }
-    ]);
+    ];
 
     let id=1;
 

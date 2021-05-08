@@ -1,11 +1,9 @@
 import React,{useState} from 'react'
 import {useSelector} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {Link,useHistory} from 'react-router-dom'
 import './Navbar.css';
 
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import menuList from './menuData'
-
 
 import hamburger from "../images/nav/menu.svg"
 import saving from "../images/nav/savings.svg"
@@ -18,6 +16,8 @@ import highlightOffWhite from "../images/nav/highlightOffWhite.svg"
 
 
 function Navbar() {
+
+    let history = useHistory();
 
     const cart = useSelector(state => state.cart);
     const [showMenu, setshowMenu] = useState(false)
@@ -57,9 +57,13 @@ function Navbar() {
             </section>
 
             <section>
-                <form action="" className="nav2">
-                    <input className="search-bar" type="search" name="" id="" placeholder="Search Walmart.com" />
-                    <img id="search-btn" className="mouse-pointer" src={search} alt="" />
+                <form action="" className="nav2" onSubmit={(e)=>{
+                    e.preventDefault();
+                    let query = document.getElementById("sq").value
+                    history.push(`/search/${query}`)
+                }}>
+                    <input className="search-bar" type="search" name="search" id="sq" placeholder="Search Walmart.com" />
+                    <button type="submit"><img id="search-btn" className="mouse-pointer" src={search} alt="" /></button>
                 </form>
             </section>
 

@@ -52,6 +52,17 @@ body h1 .hbold{
   color:black;
 }
 
+.results{
+  display: flex;
+  flex-direction: row;
+  gap:4em;
+  flex-wrap: wrap;
+}
+
+.results .product,.categoryProducts .product {
+  width: 20vw;
+}
+
 
 /*JJ Common*/
 .display-flex{
