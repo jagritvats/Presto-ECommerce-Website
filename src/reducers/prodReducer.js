@@ -4,6 +4,8 @@ import pcImg from '../images/products/HPAIO_R3TouchDesktop.jpeg'
 import projImg from '../images/products/VANKKYO470Projector.jpeg'
 import appleWatch from '../images/products/appleWatch.jpeg'
 
+import product_1_img_1 from '../images/products/product_1_img_1.jpeg'
+
 // we can use delivery single object in cart , as all delivery times will be same
 const products = [
     {
@@ -93,24 +95,58 @@ const products = [
         inCart:false
     },
     {
-        prodId:6,
-        img:printerImg,
-        name:'Canon PIXMA MG2522 Wired All-in-One Color Inkjet Printer',
-        stars:'4',
-        numReviews:'3124',
+        prodId: 6,
+        model: 'D3500',
+        // complexId:'ST102231',
+        img: product_1_img_1,
+        imgs: [
+            product_1_img_1,
+        ],
+        name: 'Nikon D3500 W/ AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR Black',
+        description: "Compact, comfortable design That's great for travel and Special eventsImage sensor That's 15x larger than those Used in Typical smartphones for sharper, clearer pictures. Works with Nikon's snapbridge app for sharing photos with a compatible smartphone or tablet. 1080P full HD videos with monaural sound at the touch of a buttonCompact, easy to use, and versatile are all traits of the Nikon D3500, which is designed to be as flexible and intuitive as possible, while still offering the imaging capabilities you expect from a DSLR. Utilizing a DX-format 24.2MP CMOS sensor and EXPEED 4 image processor, the D3500 provides a native sensitivity range from ISO 100-25600 to suit working in a variety of lighting conditions, and the sensor and processor combination also provides a 5 fps continuous shooting rate as well as Full HD 1080p video recording at 60 fps. The sensor's design also omits an optical low-pass filter in order to achieve greater sharpness and resolution from both photos and videos. Complementing the imaging capabilities, the D3500 also features SnapBridge, which utilizes Bluetooth connectivity, for wireless sharing of images to your mobile device, including automatic sharing of 2MP images between the camera and your mobile device.",
+        maxPrice: 790.99,
+        price: 572.99,
+        delivery: {
+            date: new Date() //current date + 2
+        },
+        specifications: [
+
+            ["Brand", "Nikon"],
+            ["Model", "D3500"],
+            ["Product Dimensions", "10.00 x 8.00 x 6.00 Inches"],
+            ["Features", "Dust Resistant"],
+        ],
+        reviews: [
+            {
+                author: 'Alice',
+                title: "Great camera",
+                description: "This is a great beginner camera! I bought this for my son and he loves it. He uses it a lot for his school projects. Has lots of great features!",
+                date: new Date(2021, 4, 21), // maybe a string date ,non functional
+                stars: 5
+            },
+            {
+                author: 'Haley',
+                title: "Great beginner camera!",
+                description: "Great beginner camera and it's helping me learn how to shoot in manual modes. takes clear photos and I take it everywhere with me for those moments you wish you had more than just your phone to capture the experience.",
+                date: new Date(2020, 9, 6), // maybe a string date ,non functional
+                stars: 4
+            },
+            {
+                author: 'Kenneth',
+                title: "Dont buy",
+                description: "This is not a us product. This is a gray market product that included no warranty info nor user guide/manual. You will not have any company warranty on this purchase. I returned the product immediately and repurchased elsewhere.",
+                date: new Date(2021, 4, 6), // maybe a string date ,non functional
+                stars: 1
+            }
+        ],
+        stars: 3.3,
+        numReviews: 3,
+        category: "Electronics",
         categoryId: 1,
-        price:'35',
-        inCart:false
-    },
-    {
-        prodId:7,
-        img:samImg,
-        name:"SAMSUNG Galaxy Tab A 8.0'' 32 GB WiFi Android 9.0 Tablet Black - SM-T290NZKAXAR",
-        stars:'5',
-        numReviews:618,
-        categoryId: 1,
-        price:132,
-        inCart:false
+        cartDetails: {
+            inCart: false,
+            qty: 0
+        }
     }
 ]
 
