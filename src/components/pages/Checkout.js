@@ -5,6 +5,9 @@ function Checkout() {
     return (
         <div>
             <p>is it????? jagrit</p>
+            <div>
+                <p>Neww</p>
+            </div>
         </div>
     )
 }
