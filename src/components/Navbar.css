@@ -41,6 +41,11 @@
 }
 /*Nav part 1 Over */
 
+.navigation form button{
+    background: none;
+    border: none;
+    margin-top: 3px
+}
 
 /*Nav part 2 */
 .nav2{

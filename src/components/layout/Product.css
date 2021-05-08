@@ -1,10 +1,14 @@
+.products .product{
+    user-select: none;
+}
+
 .product{
     position: relative;
     padding-bottom: 3em;
     min-width: 200px;
     flex-shrink: 0;
     text-align: left;
-    user-select: none;
+    
 }
 
 .product h3{
