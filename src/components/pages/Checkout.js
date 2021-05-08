@@ -5,7 +5,8 @@ function Checkout() {
     return (
         <div>
             <p>is it????? jagrit</p>
-            <article>Hellosssss</article>
+            <article>Hellosssss 
+                Lorem25</article>
             <div>
                 <p>Newwwww</p>
             </div>
