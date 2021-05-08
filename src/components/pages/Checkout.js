@@ -4,7 +4,8 @@ import './Checkout.css'
 function Checkout() {
     return (
         <div>
-            <p>is it?ssssss</p>
+            <p>is it????? jagrit</p>
+            <article>Hellos</article>
         </div>
     )
 }

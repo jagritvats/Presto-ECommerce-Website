@@ -8,6 +8,9 @@ import {addCart} from '../../actions'
 
 import {useDispatch} from 'react-redux'
 
+import './ProductPage.css'
+import { RateReviewSharp } from '@material-ui/icons';
+
 function ProductPage() {
     let products = useSelector(state=>state.products);
 
@@ -27,27 +30,117 @@ function ProductPage() {
     
     return (
         <div>
-            Product Page
-            {id}
-
             {
             product?
-                <div className="product">
-                    <img src={product.img} alt=""/>
-                    <h3>{product.name}</h3>
-                
-                
-                <p className="reviewCont">
-                    <span className="stars"> <Stars num={product.stars}/>  </span>
-                       
-                    <span className="numReviews">{product.numReviews}</span>
-                </p>
-                <p className="priceTag">$ {parseInt(product.price).toFixed(2)}</p>
-                <button className="btn" onClick={()=>{
-                    dispatch(addCart(product))
-                    history.push("/cart") 
-                }}>Add to cart</button>
+            <div className="productPage">
 
+                <Link to={"/category/" + product.categoryId}>{product.category}</Link>
+
+                <div className="topDetails">
+
+                    <div className="prodImgs">
+                        <img src={product.img} alt=""/>
+                    </div>
+
+                    <div className="mainDetails">
+                        <h3>{product.name}</h3>
+                        
+                        <p className="modelName">Model: {product.model}</p>
+                        
+                        <p className="reviewCont">
+                            <span className="stars"> <Stars num={product.stars}/> <span> ({product.stars}) </span> </span>
+                            
+                            <a href="#reviews" className="numReviews">{product.numReviews} Ratings</a>
+                        </p>
+
+                        <p className="priceTag">
+
+                            <span>$ {parseInt(product.price).toFixed(2)} &nbsp;</span>
+                            {
+                                product.maxPrice? 
+                                <span className="maxPrice">$ {parseInt(product.maxPrice).toFixed(2)}</span>
+                                :
+                                ""
+                            }
+                        
+                        </p>
+                        
+                        <div>
+                            <span>Qty:</span> 
+                            <select>
+                                <option>1</option>
+                            </select>
+
+                            <button className="btn cart-btn" onClick={()=>{
+                                dispatch(addCart(product))
+                                history.push("/cart") 
+                            }}>Add to cart</button>
+                        </div>
+
+                        <div className="deliveryBox">
+
+                        </div>
+
+                        <div>
+                            <p>Sold &amp; shipped by <Link href="/">Ourmart</Link></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>About This Item</h2>
+
+                    <p>
+                        {
+                            product.description
+                        }
+                    </p>
+                </div>
+
+                <div className="specifications">
+                    <h2>Specifications</h2>
+
+                    <table>
+                        <tbody>
+                            {
+                                product.specifications.map((trow)=>(
+                                    <tr>
+                                        {
+                                            trow.map((tdata)=>(
+                                                <td>{tdata}</td>
+                                            ))
+                                        }
+                                    </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div className="reviewContainer" id="#reviews">
+                    <h2>Customer reviews &amp; ratings</h2>
+                    <div className="reviewBox">
+                        <p>
+                            {product.stars}
+                            <span className="stars"> <Stars num={product.stars}/></span>
+                        </p>
+                        <p>{product.numReviews} ratings</p>
+                    </div>
+
+                    <div className="reviews">
+                        {
+                            product.reviews.map((review)=>(
+                                <div className="review">
+                                    <span className="stars"><Stars num={review.stars}/></span>
+                                    <h4>{review.title}</h4>
+                                    <p className="highligted">{review.date.toLocaleString('default', {dateStyle:"medium" })}</p>
+                                    <p>{review.description}</p>
+                                    <p className="highligted">{review.author}</p>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
                 
             </div>
             :
