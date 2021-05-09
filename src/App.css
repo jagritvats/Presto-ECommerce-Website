@@ -63,6 +63,27 @@ body h1 .hbold{
   width: 20vw;
 }
 
+/* Media Queries for products */
+@media screen and (max-width:900px){
+
+  .categoryProducts{
+      padding:0.8em;
+  }
+
+  .productsCont .product{
+      width: 30vw;
+      padding:0.2em;
+  }
+}
+
+@media screen and (max-width:500px){
+
+  .productsCont .product{
+      width: 60vw;
+      padding:0.2em;
+  }
+}
+
 
 /*JJ Common*/
 .display-flex{

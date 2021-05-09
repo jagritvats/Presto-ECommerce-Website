@@ -1,6 +1,7 @@
 .offerItem{
     background-color: white;
     padding: 1em;
+    width: 30%;
 }
 
 .topTitle{
@@ -12,4 +13,17 @@
     display: inline-block;
     padding:0px 2vw;
     padding-bottom: 1em;
+    width: 100%;
+}
+
+@media screen and (max-width:900px){
+    .offerItem{
+        width: 50%;
+    }    
+}
+
+@media screen and (max-width:600px){
+    .offerItem{
+        width: 90%;
+    }    
 }

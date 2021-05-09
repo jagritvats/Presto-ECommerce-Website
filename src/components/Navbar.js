@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
-import {useSelector} from 'react-redux'
-import {Link,useHistory} from 'react-router-dom'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { Link, useHistory } from 'react-router-dom'
 import './Navbar.css';
 
 import menuList from './menuData'
@@ -19,6 +19,8 @@ function Navbar() {
 
     let history = useHistory();
 
+    let auth = false;
+
     const cart = useSelector(state => state.cart);
     const [showMenu, setshowMenu] = useState(false)
     let qty = 0;
@@ -32,21 +34,28 @@ function Navbar() {
             <section className="nav1">
                 <img src={hamburger} onClick={() => setshowMenu(true)
                 } alt="menu" />
-                <div  className={showMenu?'show':'hide'}>{menuList.length && (
+                <div className={showMenu ? 'show' : 'hide'}>{menuList.length && (
                     <section>
-                    
-                    <ul className="menu-items">
-                    <div className="top-ham">
-                        <img src={saving} alt="img"></img>
-                        <img src={highlightOffWhite} onClick={() => setshowMenu(false)
-                } alt="menu" />
 
-                    </div>
-                    <li className="site-name">Presto.com</li>
-                        {menuList.map(item => (
-                            <li key={item.id}><img src={item.img} alt=""/><a href={item.url}>{item.label}</a></li>
-                        ))}
-                    </ul>
+                        <ul className="menu-items">
+                            <div className="top-ham">
+                                <img src={saving} alt="img"></img>
+                                <img src={highlightOffWhite} onClick={() => setshowMenu(false)
+                                } alt="menu" />
+
+                            </div>
+                            <li className="site-name">Presto.com</li>
+                            {menuList.map(item => (
+                                <li key={item.id}><img src={item.img} alt="" /><Link to={item.url}>{item.label}</Link></li>
+                            ))}
+                            
+                            {
+                                auth?
+                                    <li><button>Sign out</button></li>
+                                :
+                                    <li><Link to="account">Register/Login</Link></li>
+                            }
+                        </ul>
                     </section>
                 )}</div>
 
@@ -57,12 +66,12 @@ function Navbar() {
             </section>
 
             <section>
-                <form action="" className="nav2" onSubmit={(e)=>{
+                <form action="" className="nav2" onSubmit={(e) => {
                     e.preventDefault();
                     let query = document.getElementById("sq").value
                     history.push(`/search/${query}`)
                 }}>
-                    <input className="search-bar" type="search" name="search" id="sq" placeholder="Search Walmart.com" />
+                    <input className="search-bar" type="search" name="search" id="sq" placeholder="Search Presto.com" />
                     <button type="submit"><img id="search-btn" className="mouse-pointer" src={search} alt="" /></button>
                 </form>
             </section>
