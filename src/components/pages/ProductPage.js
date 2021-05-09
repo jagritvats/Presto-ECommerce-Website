@@ -81,7 +81,7 @@ function ProductPage() {
                         </div>
 
                         <div>
-                            <p>Sold &amp; shipped by <Link href="/">Ourmart</Link></p>
+                            <p>Sold &amp; shipped by <Link href="/">Presto</Link></p>
                         </div>
                     </div>
                 </div>

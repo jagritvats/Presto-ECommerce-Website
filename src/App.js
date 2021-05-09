@@ -12,6 +12,7 @@ import Cart from './components/pages/Cart';
 import Search from './components/Search';
 
 import ScrollToTop from './components/functionality/ScrollToTop'
+import Account from './components/pages/Account';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/search/:query" component={Search} />
+          <Route exact path="/account" component={Account} />
           <Route> <div> <p>This page doesn't exist, you're lost :( , go back to hompage</p> </div> </Route>
         </Switch>
         <Footer />

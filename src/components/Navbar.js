@@ -42,7 +42,7 @@ function Navbar() {
                 } alt="menu" />
 
                     </div>
-                    <li className="site-name">Walmart.com</li>
+                    <li className="site-name">Presto.com</li>
                         {menuList.map(item => (
                             <li key={item.id}><img src={item.img} alt=""/><a href={item.url}>{item.label}</a></li>
                         ))}
@@ -51,7 +51,7 @@ function Navbar() {
                 )}</div>
 
                 <div className="display-flex">
-                    <div className="website-name"><Link to="">WallMart</Link></div>
+                    <div className="website-name"><Link to="/">Presto</Link></div>
                     <img src={saving} alt="img"></img>
                 </div>
             </section>
@@ -68,7 +68,7 @@ function Navbar() {
             </section>
 
             <section className="nav3">
-                <a className="display-flex mouse-pointer account"><img src={account} alt="" /><div>Account</div></a>
+                <Link to="/account" className="display-flex mouse-pointer account"><img src={account} alt="" /><div>Account</div></Link>
                 <a className="display-flex mouse-pointer fav"><img src={favorite} alt="" /><div>My Items</div></a>
                 <Link to="/cart" className="mouse-pointer display-flex">
                     <img src={cartimage} alt="" />

@@ -22,14 +22,14 @@ function Offers() {
             img:CardImg,
             topTitle:'Earn 5% cash back',
             title:'Earn 5% cash back',
-            description:'every day on Walmart.com',
+            description:'every day on Presto.com',
             btnText: 'Learn how',
             link: ''
         },
         {
             img:PlusImg,
             topTitle:'No order minimum shipping',
-            title:'For Walmart+ members',
+            title:'For Presto+ members',
             description:'Start your free trial today. Restrictions apply',
             btnText: 'Try it free',
             link: ''
