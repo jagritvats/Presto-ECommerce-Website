@@ -23,7 +23,18 @@ const cartReducer = (state=[],action)=>{
             console.log("removing")
             console.log(state)
             return [...state.filter(prod=>prod.prodId!=action.payload.id)]
-
+        case 'REDUCE_BY_ONE':
+            for(var i=0;i<state.length;i++){
+                if(state[i].prodId == action.payload.product.prodId){
+                    console.log("this")
+                    return state.slice(0,i)
+                           .concat({
+                               ...state[i],
+                               quantity:state[i].quantity-1
+                           })
+                           .concat(state.slice(i+1))
+                }
+            }
 
         default:
             return state

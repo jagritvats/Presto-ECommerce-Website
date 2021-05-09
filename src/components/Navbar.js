@@ -12,7 +12,7 @@ import cartimage from "../images/nav/cart.svg"
 import favorite from "../images/nav/favorite.svg"
 import account from "../images/nav/account.svg"
 import highlightOffWhite from "../images/nav/highlightOffWhite.svg"
-
+import person from '../images/others/person.svg'
 
 
 function Navbar() {
@@ -53,7 +53,7 @@ function Navbar() {
                                 auth?
                                     <li><button>Sign out</button></li>
                                 :
-                                    <li><Link to="account">Register/Login</Link></li>
+                                    <li><img src={person} alt="" /><Link to="account">Register/Login</Link></li>
                             }
                         </ul>
                     </section>

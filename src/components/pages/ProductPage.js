@@ -84,10 +84,6 @@ function ProductPage() {
                                 </p>
 
                                 <div className="qtyCont">
-                                    <span>Qty:</span>
-                                    <select>
-                                        <option>1</option>
-                                    </select>
 
                                     <button className="btn cart-btn" onClick={() => {
                                         dispatch(addCart(product))

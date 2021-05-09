@@ -142,7 +142,7 @@ function Checkout() {
                 <hr />
                 <div className="displayFlex">
                   <div>Total</div>
-                  <div><b>${price}</b></div>
+                  <div><b>${price.toFixed(2)}</b></div>
                 </div>
                 <hr />
                 <button type="submit" className="submitCheckout">Place a Order</button>

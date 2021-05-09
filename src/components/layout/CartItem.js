@@ -4,7 +4,7 @@ import './CartItem.css'
 import {useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 
-import {removeCart} from '../../actions';
+import {reduceByOne} from '../../actions';
 
 function CartItem({product}) {
 
@@ -23,12 +23,15 @@ function CartItem({product}) {
 
             <p className="quantity">
                 <span>Qty: {product.quantity}</span>
-                <select name="quantity">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
+                {
+                    product.quantity>1?
+                        <button onClick={()=>{
+                            dispatch(reduceByOne(product))
+                        }}> - </button>
+                    :
+                    ""
+                }
+                
             </p>
 
 

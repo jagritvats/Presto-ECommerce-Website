@@ -10,6 +10,8 @@ import './Cart.css'
 function Cart() {
 
     const cart = useSelector(state => state.cart);
+    const authSt = useSelector(state => state.auth)
+    let auth=authSt.isLoggedIn;
 
     let history = useHistory();
 
@@ -70,7 +72,17 @@ function Cart() {
                             </tbody>
                         </table>
 
-                        <button onClick={() => { history.push("/checkout") }} className="btn btn-checkout">
+                        <button onClick={() => { 
+                            if(auth){
+                                history.push("/checkout") 
+                            }else{
+                                alert("Login First!, redirecting to login page in 1 seconds")
+                                setTimeout(()=>{
+                                    history.push('/account')
+                                },1000)
+                            }
+                            
+                        }} className="btn btn-checkout">
                             Check out
                     </button>
 
