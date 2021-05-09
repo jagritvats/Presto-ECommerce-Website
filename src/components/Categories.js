@@ -7,6 +7,10 @@ import wclothesImg from '../images/categories/women_clothing.jpg'
 import patioImg from '../images/categories/patio_garden.jpg'
 import furnitureImg from '../images/categories/furniture.jpg'
 import autoImg from '../images/categories/auto_tires.jpeg'
+import mensclothingImg from '../images/categories/mensclothing.jpg'
+import homeImg from '../images/categories/home.jpg'
+import outdoorsImg from '../images/categories/outdoors.jpg'
+import foodImg from '../images/categories/food.jpg'
 
 import CategoryItem from './layout/CategoryItem';
 
@@ -42,6 +46,26 @@ function Categories() {
             id:6,
             img:autoImg,
             name:'Auto & Tires',
+        },
+        {
+            id:7,
+            img:mensclothingImg,
+            name:"Men's Clothing",
+        },
+        {
+            id:8,
+            img:homeImg,
+            name:'Home',
+        },
+        {
+            id:9,
+            img:outdoorsImg,
+            name:'Outdoors',
+        },
+        {
+            id:10,
+            img:foodImg,
+            name:'Food',
         }
     ];
 

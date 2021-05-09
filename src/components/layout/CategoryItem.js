@@ -6,8 +6,6 @@ function CategoryItem({category}) {
     let history = useHistory();
     return (
         <div className="categoryItem" onClick={()=>{
-            // const r = new RegExp("\[&,']");
-            // history.push(`/category/${category.name.toLowerCase().replaceAll(" ","-").replace("&","").replace("'","")}`)
             history.push(`/category/${category.id}`)
 
         }}>

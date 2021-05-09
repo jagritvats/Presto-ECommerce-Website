@@ -2,10 +2,7 @@ import React,{useState} from "react";
 import "./Account.css";
 import Login from "./Login"
 import Register from "./Register"
-import "./loginRegister.scss"
-
-
-
+import "./loginRegister.css"
 
 
 const Account = () => {
