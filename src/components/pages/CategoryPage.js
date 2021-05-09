@@ -10,6 +10,33 @@ function CategoryPage() {
 
     let param = useParams();
 
+    const categories = [
+        {
+            id:1,
+            name:'Electronics',
+        },
+        {
+            id:2,
+            name:'Video games',
+        },
+        {
+            id:3,
+            name:"Women's clothing",
+        },
+        {
+            id:4,
+            name:'Patio & garden',
+        },
+        {
+            id:5,
+            name:'Furniture',
+        },
+        {
+            id:6,
+            name:'Auto & Tires',
+        }
+    ];
+
     let [catProds,setCatProds] = useState([]);
 
     let products = useSelector(state=>state.products)
@@ -26,13 +53,13 @@ function CategoryPage() {
 
         setCatProds([...catProdsArr])
 
-    },[catProds])
+    },[])
 
     let id=0;
 
     return (
         <div>
-            Category
+            <h2>{categories.find(category => category.id == catId).name}</h2>
             
             <div className="categoryProducts">
                 {

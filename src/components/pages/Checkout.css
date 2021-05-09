@@ -1,0 +1,281 @@
+*,
+::after,
+::before {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+.displayFlex {
+display: flex;
+}
+
+.displayFlexCol {
+display: flex;
+flex-direction: column;
+}
+
+.perso-details label,
+.pay-details label {
+display: flex;
+flex-direction: column;
+font-size: 1.25rem;
+margin-bottom: 19px;
+}
+
+
+.checkOutDetails form {
+display: flex;
+}
+
+/* .personal__info input {
+height: 1.5rem;
+
+} */
+
+
+/* This is For To remove Arrow In Number Input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+/* ----------*/
+
+
+
+.full-detail {
+display: flex;
+justify-content: center;
+grid-gap: 20px;
+}
+
+.perso_pay {
+width: 60vw;
+/* border: 2px solid red; */
+background: #f1f1f1;
+border-radius: 1%;
+}
+
+.subtotal {
+width: 20vw;
+/* border: 2px solid red; */
+position: fixed;
+padding: 3px;
+height: max-content;
+background: #f0f8ff;
+padding-bottom: 22px;
+box-shadow: 2px 2px 3px 2px lightblue;
+}
+.posFixed{
+  width: 20vw;
+}
+
+.subtotal .displayFlex {
+justify-content: space-between;
+}
+
+.perso-details {
+justify-content: space-evenly;
+}
+
+.perso-details input,
+.perso-details select,
+.card-info input,
+.card-info select {
+/* height: 38px; */
+height: 45px;
+/* line-height: 45px; */
+padding-left: 12px;
+font-size: 1.2rem;
+
+}
+
+.delivery-top div {
+margin-left: 6.6%;
+color: red;
+padding: 8px 0;
+}
+
+.personal__info,
+.address {
+width: 40%;
+}
+
+.card-info {
+display: flex;
+width: 43%;
+flex-direction: column;
+margin-left: 6%;
+}
+
+.selectState {
+width: 60%;
+}
+
+.pincode {
+width: 30%;
+}
+
+.pay-details+label {
+margin-bottom: 15px;
+}
+
+.cart-section {
+text-shadow: -3px -1px 0px white;
+text-align: center;
+padding: 1rem;
+/* word-spacing: 0.2em; */
+font-size: 1.8rem;
+letter-spacing: 2.2px;
+}
+
+.card-info h3,
+.card-info hr,
+.card-info .pay-details {
+margin-bottom: 15px;
+}
+
+.subtotal>div {
+margin: 8px;
+font-size: 1.3rem;
+}
+
+
+.submitCheckout {
+width: 80%;
+height: 2rem;
+margin: 15px 10% 0 10%;
+border: 2px solid black;
+border-radius: 32px;
+padding: 4px 8px;
+background: #00bbff;
+box-shadow: 2px 1px 4px 0px black;
+color: white;
+font-weight: bold;
+font-size: 1rem;
+cursor: pointer;
+}
+
+.checkoutHeading {
+font-size: 1.5rem;
+font-weight: 600;
+}
+
+
+@media screen and (max-width: 557px) {
+.full-detail {
+grid-gap: 0;
+flex-direction: column;
+}
+
+.perso_pay {
+width: 100vw;
+}
+
+.perso-details {
+flex-direction: column;
+align-items: center;
+}
+
+.personal__info,
+.address {
+width: 80%;
+/* flex-direction: column; */
+}
+
+.card-info {
+width: 80%;
+}
+
+.subtotal {
+width: 100vw;
+position: absolute ;
+}
+.posFixed{
+  width: 100vw;
+}
+
+.submitCheckout {
+width: 40%;
+margin: 15px 30% 0 30%;
+}
+
+
+}
+/* @media screen and (min-width: 557px) and (max-width: 698px) {
+
+  .perso_pay {
+    width: 100vw;
+    }
+    .subtotal {
+      width: 100vw;
+      margin: 0 10vw;
+      position: absolute ;
+      }
+      .posFixed{
+        width: 100vw;
+      }
+} */
+
+@media screen and (min-width: 557px) and (max-width: 874px) {
+  .checkOutDetails form {
+    align-items: center;
+  }
+.full-detail {
+flex-direction: column;
+grid-gap: 0;
+}
+
+.perso_pay {
+width: 80vw;
+}
+.card-info {
+  
+  width: 60%;
+}
+.selectState {
+width: 40%;
+}
+
+.pincode {
+width: 40%;
+}
+.subtotal {
+  width: 80vw;
+  margin: 0 10vw;
+  position: absolute ;
+  }
+  .posFixed{
+    width: 100vw;
+  }
+  .submitCheckout {
+    width: 40%;
+    margin: 15px 30% 0 30%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1245px) {
+.full-detail {
+grid-gap: 0;
+}
+
+.perso_pay {
+width: 76vw;
+}
+
+.selectState {
+width: 50%;
+}
+
+.pincode {
+width: 38%;
+}
+}
