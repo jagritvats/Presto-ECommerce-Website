@@ -11,6 +11,8 @@ import CategoryPage from './components/pages/CategoryPage';
 import Cart from './components/pages/Cart';
 import Search from './components/Search';
 
+import ScrollToTop from './components/functionality/ScrollToTop'
+
 function App() {
 
   return (
@@ -19,6 +21,7 @@ function App() {
 
       <Router>
         <Navbar cart={[]}/>
+          <ScrollToTop/>
         <Switch>
           <Route exact path="/" component={Homepage}/>
           <Route exact path="/product/:id" component={ProductPage}/>

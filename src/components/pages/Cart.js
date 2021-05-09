@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import {useSelector} from 'react-redux'
 import CartItem from '../layout/CartItem';
 
-import {Link} from 'react-router-dom';
+import {Link,useHistory} from 'react-router-dom';
 // import CircularProgress from '@material-ui/core/CircularProgress';
 
 import './Cart.css'
@@ -10,6 +10,8 @@ import './Cart.css'
 function Cart() {
 
     const cart = useSelector(state=> state.cart);
+
+    let history = useHistory();
 
     let qty = 0;
     let totalPrice = 0;
@@ -44,8 +46,8 @@ function Cart() {
                     <table>
                         <tbody>
                             <tr>
-                                <td>Subtotal</td>
-                                <td>$ {totalPrice}</td>
+                                <td>Subtotal ( {qty} items)</td>
+                                <td>$ {totalPrice.toFixed(2)}</td>
                             </tr>
 
                             <tr>
@@ -60,15 +62,15 @@ function Cart() {
 
                             <tr className="cartTotal">
                                 <td>Est. total</td>
-                                <td className="boldPrice">$ {totalPrice}</td>
+                                <td className="boldPrice">$ {totalPrice.toFixed(2)}</td>
                             </tr>
 
                         </tbody>
                     </table>
 
-                    <Link to="/checkout" className="btn btn-checkout">
+                    <button onClick={()=>{history.push("/checkout")}} className="btn btn-checkout">
                         Check out
-                    </Link>
+                    </button>
 
                     <p><span className="purple">Congrats</span> - you get <span className="purple">free delivery</span>!</p>
 

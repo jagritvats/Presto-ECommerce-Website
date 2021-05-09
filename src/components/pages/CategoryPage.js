@@ -21,7 +21,7 @@ function CategoryPage() {
         },
         {
             id:3,
-            name:"Women's clothing",
+            name:"Furniture",
         },
         {
             id:4,
@@ -29,7 +29,7 @@ function CategoryPage() {
         },
         {
             id:5,
-            name:'Furniture',
+            name:"Women's clothing",
         },
         {
             id:6,

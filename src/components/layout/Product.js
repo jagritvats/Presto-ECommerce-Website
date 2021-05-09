@@ -23,7 +23,7 @@ function Product({product}) {
                    
                 <span className="numReviews">{product.numReviews}</span>
             </p>
-            <p className="priceTag">$ {parseInt(product.price).toFixed(2)}</p>
+            <p className="priceTag">$ {product.price.toFixed(2)}</p>
             <button href="" className="btn" onClick={()=>{
                 dispatch(addCart(product))
             }}>Add to cart</button>

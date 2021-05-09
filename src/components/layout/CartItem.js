@@ -36,16 +36,16 @@ function CartItem({product}) {
             <p className="rightSide"> 
                 <span>
                     {product.maxPrice? 
-                    <span className="maxPrice">$ {parseInt(product.maxPrice).toFixed(2)}&nbsp;</span>
+                    <span className="maxPrice">$ {product.maxPrice.toFixed(2)}&nbsp;</span>
                     :
                     ""
                     }
-                    <span> $ {parseInt(product.price).toFixed(2)}</span>
+                    <span> $ {product.price.toFixed(2)}</span>
 
                 </span>
                 {
                     product.quantity>1?
-                        <span className="boldPrice"> $ {((parseInt(product.price))*product.quantity).toFixed(2) }</span>
+                        <span className="boldPrice"> $ {((product.price)*product.quantity).toFixed(2) }</span>
                         :
                         ""
                 }

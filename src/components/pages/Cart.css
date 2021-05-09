@@ -22,7 +22,8 @@
 }
 
 .cartSummary{
-    width: 40%;
+    width: 30%;
+    padding: 1em 1.2em;
 }
 
 .purple{
@@ -34,8 +35,19 @@
     background-color: rgb(0, 101, 255);
     text-decoration: none;
     border: none;
+    width: 80%;
+    padding: 0.8em 1em;
+    text-align: center;
 }
 
 .btn-checkout:hover{
     background-color:rgb(1, 90, 224) ;
+}
+
+.btn-checkout:disabled{
+    background-color: rgb(113, 113, 129);
+}
+
+.btn-checkout:disabled:hover{
+    cursor: not-allowed;
 }

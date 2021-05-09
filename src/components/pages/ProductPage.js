@@ -54,10 +54,10 @@ function ProductPage() {
 
                         <p className="priceTag">
 
-                            <span>$ {parseInt(product.price).toFixed(2)} &nbsp;</span>
+                            <span>$ {product.price.toFixed(2)} &nbsp;</span>
                             {
                                 product.maxPrice? 
-                                <span className="maxPrice">$ {parseInt(product.maxPrice).toFixed(2)}</span>
+                                <span className="maxPrice">$ {product.maxPrice.toFixed(2)}</span>
                                 :
                                 ""
                             }

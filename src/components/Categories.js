@@ -25,8 +25,8 @@ function Categories() {
         },
         {
             id:3,
-            img:wclothesImg,
-            name:"Women's clothing",
+            img:furnitureImg,
+            name:"Furniture",
         },
         {
             id:4,
@@ -35,8 +35,8 @@ function Categories() {
         },
         {
             id:5,
-            img:furnitureImg,
-            name:'Furniture',
+            img:wclothesImg,
+            name:"Women's Clothing",
         },
         {
             id:6,
