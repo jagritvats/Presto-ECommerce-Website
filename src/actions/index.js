@@ -35,6 +35,15 @@ export const reduceByOne = (product) => {
     }
 }
 
+export const increaseByOne = (product) => {
+    return{
+        type:'INCREASE_BY_ONE',
+        payload:{
+            product
+        }
+    }
+}
+
 export const lgout = () => {
     return dispatch => {
   
