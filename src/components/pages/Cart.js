@@ -80,7 +80,7 @@ function Cart() {
                     </div>
                         :
                             <div className="emptyCartSidebox">
-                                <p> Empty Cart</p>
+                                <p></p>
                             </div>
                     }
                     
