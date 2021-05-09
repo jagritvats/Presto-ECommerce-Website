@@ -26,8 +26,8 @@ const Register = ({setLogin}) => {
           </div>
         </div>
         <div className="footer">
-        <button type="button" className="btn">Register</button>
-        <button type="button" className="btn" onClick={()=>{setLogin(true)}}>Sign In</button>
+        <button type="button" className="btn2 btn">Register</button>
+        <button type="button" className="btn2 btn" onClick={()=>{setLogin(true)}}>Sign In</button>
           
         </div>
       </div>

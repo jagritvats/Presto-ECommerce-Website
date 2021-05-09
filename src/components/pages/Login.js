@@ -22,8 +22,8 @@ export const Login = ({setLogin}) => {
         </div>
       </div>
       <div className="footer">
-      <button type="button" className="btn">Login</button>
-        <button type="button" className="btn" onClick={()=>{setLogin(false)}}>Create Account</button>
+      <button type="button" className="btn2 btn">Login</button>
+        <button type="button" className="btn2 btn" onClick={()=>{setLogin(false)}}>Create Account</button>
         
       </div>
     </div>
