@@ -12,21 +12,9 @@ function Footer() {
         <i className="fa fa-youtube"></i>
       </div>
 
-<<<<<<< HEAD
-  <div className="row">
-    <div className="column sidel">
-      <h2 className="foot set1">Presto's services</h2>
-      <a href="">Delivery</a>
-      <a href="">Grocery Pickup</a>
-      <a href="">Money Center</a>
-      <a href="">Our Credit Card</a>
-      <a href="">Weekly AD</a>
-      <a href="">Other Services</a>
-    </div>
-=======
       <div className="row">
         <div className="column sidel">
-          <h2 className="foot set1">Our services</h2>
+          <h2 className="foot set1">Presto Services</h2>
           <a href="">Delivery</a>
           <a href="">Grocery Pickup</a>
           <a href="">Money Center</a>
@@ -34,7 +22,6 @@ function Footer() {
           <a href="">Weekly AD</a>
           <a href="">Other Services</a>
         </div>
->>>>>>> db1a145bad3797230d5b53937eb4d1a8f3cc4715
 
         <div className="column middle">
           <h2 className="foot set3">Customer services</h2>
