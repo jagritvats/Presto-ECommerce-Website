@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './Offers.css';
 
 import GroceryImg from '../images/offers_groceries.jpg'
@@ -9,7 +9,7 @@ import OfferItem from './layout/OfferItem';
 
 function Offers() {
 
-    let [offers,setOffers] = useState([
+    const offers = [
         {
             img:GroceryImg,
             topTitle:'Pickup or delivery',
@@ -34,7 +34,7 @@ function Offers() {
             btnText: 'Try it free',
             link: ''
         }
-    ]);
+    ];
 
     let id=1;
 

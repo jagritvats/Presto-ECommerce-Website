@@ -61,7 +61,7 @@ function CategoryPage() {
         <div>
             <h2>{categories.find(category => category.id == catId).name}</h2>
             
-            <div className="categoryProducts">
+            <div className="categoryProducts productsCont">
                 {
                     catProds.length?
                     catProds.map((product)=>(

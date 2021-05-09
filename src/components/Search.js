@@ -23,7 +23,11 @@ function Search() {
 
     return (
         <div>
-            <div className="results">
+            <div className="results productsCont" style={{
+                display:'flex',
+                justifyContent:'center',
+                padding:'0em 1em'
+            }}>
 
                 {
                     sProds.length>0

@@ -7,42 +7,42 @@ export const menuData =[
     {
         id:0,
         label:"Home",
-        url:"https://xyz.com",
+        url:"/",
         img:cartBlack
 
     },
     {
         id:1,
         label:"Location",
-        url:"https://xyz.com",
+        url:"",
         img:locationblack
 
     },
     {
         id:2,
         label:"Contact Us",
-        url:"https://xyz.com",
+        url:"",
         img:phoneblack
 
     },
     {
         id:3,
         label:"My Items",
-        url:"https://xyz.com",
+        url:"/cart",
         img:cartBlack
 
     },
     {
         id:4,
         label:"Privacy Policy",
-        url:"https://xyz.com",
+        url:"",
         img:cartBlack
 
     },
     {
         id:5,
         label:"Today Deals",
-        url:"https://xyz.com",
+        url:"",
         img:cartBlack
     },
 ];
