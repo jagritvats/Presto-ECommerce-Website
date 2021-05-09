@@ -14,7 +14,7 @@ function Footer() {
 
   <div className="row">
     <div className="column sidel">
-      <h2 className="foot set1">Our services</h2>
+      <h2 className="foot set1">Presto's services</h2>
       <a href="">Delivery</a>
       <a href="">Grocery Pickup</a>
       <a href="">Money Center</a>
