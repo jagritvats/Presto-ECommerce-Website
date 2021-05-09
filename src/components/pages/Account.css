@@ -1,0 +1,29 @@
+#accountPage{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding-bottom: 65px;
+}
+/* #log_Res_But{
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+    grid-gap: 20px;
+} */
+/* #log_Res_But button{
+    height: 30px;
+    border-radius: 25px;
+    border: 1px ;
+    background-color: #2196f3;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+} */
+#log_Res_Detail{
+    width: max-content;
+    background: white;
+
+}
