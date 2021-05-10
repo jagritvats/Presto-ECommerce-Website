@@ -13,6 +13,10 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
   );
 
+store.subscribe(()=>{
+  sessionStorage.setItem('localCart', JSON.stringify(store.getState().cart))
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

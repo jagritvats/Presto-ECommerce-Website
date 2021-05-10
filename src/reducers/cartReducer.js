@@ -1,8 +1,11 @@
 // if using authetication, when we bring cart then we have to update products cart prop
 
 // const initCart = sessionStorage.getItem("cart");
+const initCart = sessionStorage.getItem('localCart') 
+                       ? JSON.parse(sessionStorage.getItem('localCart'))
+                       : []
 
-const cartReducer = (state = [], action) => {
+const cartReducer = (state = initCart, action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
             //check if already in cart
