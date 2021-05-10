@@ -64,4 +64,4 @@ export const lgout = () => {
           console.log(err);
         });
     };
-  };
+};

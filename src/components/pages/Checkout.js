@@ -50,13 +50,13 @@ function Checkout() {
                     <label> Landmark : <input type="text" name="landmark" /> </label>
                     <label> City*: <input type="text" name="city" required /> </label>
                     <div className="displayFlex" style={{ justifyContent: "space-between" }}>
-                      <label className="selectState">State :<select name="state" id="" >
+                      <label className="selectState">State :<select name="state" id="" defaultValue="6">
                         <option value="1">Andhra Pradesh</option>
                         <option value="2">Arunachal Pradesh</option>
                         <option value="3">Assam</option>
                         <option value="4">Bihar</option>
                         <option value="5">Chhattisgarh</option>
-                        <option value="6" selected>Goa</option>
+                        <option value="6">Goa</option>
                         <option value="7">Gujarat</option>
                         <option value="8">Haryana</option>
                         <option value="9">Himachal Pradesh</option>
@@ -146,7 +146,7 @@ function Checkout() {
               <div className="subtotal">
                 <div className="displayFlex">
                   <div>Subtotal</div>
-                  <div>${price}</div>
+                  <div>${price.toFixed(2)}</div>
                 </div>
                 <div className="displayFlex">
                   <div>Delivery</div>
