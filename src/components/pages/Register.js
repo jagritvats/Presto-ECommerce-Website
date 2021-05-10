@@ -14,13 +14,11 @@ const Register = ({ setLogin }) => {
       .then((userCredential) => {
 
         var user = userCredential.user;
-        console.log(user)
 
         var user = firebase.auth().currentUser;
         user.updateProfile({
           displayName: username
         }).then(function() {
-          console.log("updated")
           alert("Registered!")
         }).catch(function(error) {
           alert("Error in Username")
