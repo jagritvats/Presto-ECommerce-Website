@@ -21,6 +21,10 @@
     width: 40%;
 }
 
+.switchBtn{
+    background-color: rgb(176, 0, 199) !important;
+}
+
 /* #log_Res_But{
     display: flex;
     flex-direction: column;
