@@ -30,7 +30,11 @@ function Checkout() {
     <div>
       <div className="checkout">
         <div className="checkOutDetails">
-          <form className="full-detail">
+          <form className="full-detail" onSubmit={(e)=>{
+                  e.preventDefault()
+                  alert("Order Placed!")
+                  history.push("/")
+                }}>
             <div className="perso_pay">
               <div className="delivery">
                 <div className="delivery-top">
@@ -157,11 +161,7 @@ function Checkout() {
                   <div><b>${price.toFixed(2)}</b></div>
                 </div>
                 <hr />
-                <button type="submit" className="submitCheckout" onSubmit={(e)=>{
-                  e.preventDefault()
-                  alert("Order Placed!")
-                  history.push("/")
-                }}>Place a Order</button>
+                <button type="submit" className="submitCheckout">Place a Order</button>
               </div>
             </div>
           </form>
