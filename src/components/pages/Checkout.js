@@ -157,7 +157,11 @@ function Checkout() {
                   <div><b>${price.toFixed(2)}</b></div>
                 </div>
                 <hr />
-                <button type="submit" className="submitCheckout">Place a Order</button>
+                <button type="submit" className="submitCheckout" onSubmit={(e)=>{
+                  e.preventDefault()
+                  alert("Order Placed!")
+                  history.push("/")
+                }}>Place a Order</button>
               </div>
             </div>
           </form>
