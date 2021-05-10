@@ -2,11 +2,15 @@ import React,{useEffect} from 'react'
 import './Checkout.css'
 import {useHistory} from 'react-router-dom'
 
-import { useSelector } from 'react-redux'
+import {removeAll} from '../../actions'
+
+import { useSelector, useDispatch } from 'react-redux'
 
 function Checkout() {
 
   let history = useHistory();
+
+  let dispatch = useDispatch();
 
   const cart = useSelector(state => state.cart);
 
@@ -33,6 +37,7 @@ function Checkout() {
           <form className="full-detail" onSubmit={(e)=>{
                   e.preventDefault()
                   alert("Order Placed!")
+                  dispatch(removeAll())
                   history.push("/")
                 }}>
             <div className="perso_pay">
@@ -43,10 +48,10 @@ function Checkout() {
                 </div>
                 <div className="perso-details displayFlex">
                   <div className="personal__info displayFlexCol">
-                    <label> First name*: <input type="text" name="fname" required /> </label>
+                    <label> First name*: <input type="text" name="fname" defaultValue={auth.isLoggedIn?auth.auth.displayName:""} required /> </label>
                     <label> Last name *: <input type="text" name="lname" required /> </label>
                     <label> Phone Number *: <input type="number" name="pnumber" required max="9999999999" min="1000000000" /> </label>
-                    <label> Email Address *: <input type="email" name="email" required /> </label>
+                    <label> Email Address *: <input type="email" name="email" value={auth.isLoggedIn?auth.auth.email:""} required disabled/> </label>
                   </div>
                   <div className="address displayFlexCol">
                     <label> Street address*: <input type="text" name="streetadd" required /> </label>

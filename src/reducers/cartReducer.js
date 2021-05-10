@@ -35,7 +35,9 @@ const cartReducer = (state = initCart, action) => {
                         .concat(state.slice(i + 1))
                 }
             }
-
+        
+        case "REMOVE_ALL":
+            return []
         default:
             return state
     }

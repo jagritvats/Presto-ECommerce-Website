@@ -52,6 +52,12 @@ export const loadedAuth = () => {
     }
 }
 
+export const removeAll = () => {
+    return {
+        type:"REMOVE_ALL"
+    }
+}
+
 export const lgout = () => {
     return dispatch => {
   
