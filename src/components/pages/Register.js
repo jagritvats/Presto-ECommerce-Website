@@ -9,29 +9,27 @@ const Register = ({ setLogin }) => {
     var email = document.getElementById("remail").value;
     var password = document.getElementById("rpassword").value;
     var username = document.getElementById("rusername").value;
-    auth.createUserWithEmailAndPassword(email, password)
+    firebase.auth().createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
-        // Signed in 
+
         var user = userCredential.user;
         console.log(user)
 
-        var user = auth.currentUser;
+        var user = firebase.auth().currentUser;
         user.updateProfile({
           displayName: username
         }).then(function() {
-          // Update successful.
           console.log("updated")
+          alert("Registered!")
         }).catch(function(error) {
-          // An error happened.
-          console.log("error")
+          alert("Error in Username")
         });
   
-        // ...
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ..
+        alert(errorMessage)
       });
 
 

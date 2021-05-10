@@ -47,10 +47,10 @@ export const increaseByOne = (product) => {
 export const lgout = () => {
     return dispatch => {
   
-      auth
+      firebase.auth()
         .signOut()
         .then(res => {
-          dispatch(doLogout(res.data));
+          dispatch(doLogout());
         })
         .catch(err => {
           console.log(err);

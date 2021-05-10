@@ -16,14 +16,11 @@ const Account = () => {
     let [authObj,setauthObj] = useState(null);
 
     useEffect(()=>{
-        auth.onAuthStateChanged(user =>{
+        firebase.auth().onAuthStateChanged(user =>{
             setauthObj(user)
             console.log(user)
             if(user){
                 dispatch(doLogin)
-            }else{
-                console.log("ww")
-                dispatch(doLogout)
             }
         })
     },[])
@@ -36,15 +33,9 @@ const Account = () => {
                         <p>{authObj.displayName}</p>
                         <p>{authObj.email}</p>
                         <button onClick={()=>{
-                            // auth.signOut().then(()=>{
-                            //     console.log("done")
-                            // }).catch((error)=>{
-                            //     console.log(error)
-                            // })
 
                             dispatch(lgout())
                             
-                            // dispatch(doLogout)
                             }}>Signout</button>
                     </div>
                 :
