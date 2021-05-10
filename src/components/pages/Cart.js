@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import CartItem from '../layout/CartItem';
 
 import { Link, useHistory } from 'react-router-dom';
-// import CircularProgress from '@material-ui/core/CircularProgress';
 
 import './Cart.css'
 

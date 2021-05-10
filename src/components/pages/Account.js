@@ -1,49 +1,47 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./Account.css";
 import Login from "./Login"
 import Register from "./Register"
 import "./loginRegister.css"
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
-import {doLogin, doLogout, lgout} from '../../actions'
+
+import SignOutButton from "../layout/SignOutButton";
 
 const Account = () => {
     const [login, setLogin] = useState(true)
 
-    let dispatch = useDispatch();
-
-    let [authObj,setauthObj] = useState(null);
-
-    useEffect(()=>{
-        firebase.auth().onAuthStateChanged(user =>{
-            setauthObj(user)
-            console.log(user)
-            if(user){
-                dispatch(doLogin)
-            }
-        })
-    },[])
+    let authObj = useSelector(state=>state.auth.auth)
 
     return (
         <div id="accountPage">
             {
-                authObj?
+                authObj ?
                     <div className="profile">
-                        <p>{authObj.displayName}</p>
-                        <p>{authObj.email}</p>
-                        <button onClick={()=>{
+                        <table className="details">
+                            <h3>Profile Details</h3>
+                            <tbody>
+                                <tr>
+                                    <td>Name:</td>
+                                    <td>{authObj.displayName}</td>
+                                </tr>
 
-                            dispatch(lgout())
-                            
-                            }}>Signout</button>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td>{authObj.email}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <SignOutButton />
                     </div>
-                :
-               <div id="log_Res_Detail">
-                {login ? <Login setLogin={setLogin} /> : <Register setLogin={setLogin} />}
-            </div> 
+                    :
+                    <div id="log_Res_Detail">
+                        {login ? <Login setLogin={setLogin} /> : <Register setLogin={setLogin} />}
+                    </div>
             }
-            
+
 
         </div>
     )

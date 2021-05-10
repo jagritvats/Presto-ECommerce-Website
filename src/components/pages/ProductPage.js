@@ -38,6 +38,10 @@ function ProductPage() {
 
     let key = 0;//for keys in list rendering
 
+    let key2 = 0;// for specs list
+
+    let key3 = 0;// for reviews list
+
     return (
         <div>
             {
@@ -68,7 +72,7 @@ function ProductPage() {
                                 <p className="reviewCont">
                                     <span className="stars"> <Stars num={product.stars} /> <span> ({product.stars}) </span> </span>
 
-                                    <a href="#reviews" className="numReviews">{product.numReviews} Ratings</a>
+                                    <span className="numReviews">{product.numReviews} Ratings</span>
                                 </p>
 
                                 <p className="priceTag">
@@ -98,7 +102,7 @@ function ProductPage() {
                                 </div>
 
                                 <div className="soldBy">
-                                    <p>Sold &amp; shipped by <Link href="/">Presto</Link></p>
+                                    <p>Sold &amp; shipped by <Link to="/">Presto</Link></p>
                                 </div>
                             </div>
                         </div>
@@ -120,10 +124,10 @@ function ProductPage() {
                                 <tbody>
                                     {
                                         product.specifications.map((trow) => (
-                                            <tr>
+                                            <tr key={key2++}>
                                                 {
                                                     trow.map((tdata) => (
-                                                        <td>{tdata}</td>
+                                                        <td key={key2++}>{tdata}</td>
                                                     ))
                                                 }
                                             </tr>
@@ -146,7 +150,7 @@ function ProductPage() {
                             <div className="reviews">
                                 {
                                     product.reviews.map((review) => (
-                                        <div className="review">
+                                        <div className="review" key={key3++}>
                                             <span className="stars"><Stars num={review.stars} /></span>
                                             <h4>{review.title}</h4>
                                             <p className="highligted">{review.date.toLocaleString('default', { dateStyle: "medium" })}</p>

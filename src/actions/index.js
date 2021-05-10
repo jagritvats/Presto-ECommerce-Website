@@ -5,9 +5,12 @@ export const addCart = (product) => {
     }
 }
 
-export const doLogin = () => {
+export const doLogin = (auth) => {
     return {
-        type:"LOGIN"
+        type:"LOGIN",
+        payload:{
+            auth:auth
+        }
     }
 }
 
@@ -29,15 +32,6 @@ export const removeCart = (id) => {
 export const reduceByOne = (product) => {
     return{
         type:'REDUCE_BY_ONE',
-        payload:{
-            product
-        }
-    }
-}
-
-export const increaseByOne = (product) => {
-    return{
-        type:'INCREASE_BY_ONE',
         payload:{
             product
         }

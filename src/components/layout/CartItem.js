@@ -4,7 +4,7 @@ import './CartItem.css'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { reduceByOne , increaseByOne} from '../../actions';
+import { reduceByOne , addCart, removeCart} from '../../actions';
 
 function CartItem({ product }) {
 
@@ -33,7 +33,7 @@ function CartItem({ product }) {
                 }
 
                 <button className="increaseByOneBtn" onClick={() => {
-                    dispatch(increaseByOne(product))
+                    dispatch(addCart(product))
                 }}> + </button>
 
             </p>

@@ -16,10 +16,12 @@ const cartReducer = (state = [], action) => {
                 }
             }
             return [...state, { ...action.payload.product, quantity: 1 }]
+
         case 'REMOVE_FROM_CART':
             console.log("removing")
             console.log(state)
             return [...state.filter(prod => prod.prodId != action.payload.id)]
+
         case 'REDUCE_BY_ONE':
             for (var i = 0; i < state.length; i++) {
                 if (state[i].prodId == action.payload.product.prodId) {
@@ -31,17 +33,7 @@ const cartReducer = (state = [], action) => {
                         .concat(state.slice(i + 1))
                 }
             }
-        case 'INCREASE_BY_ONE':
-            for (var i = 0; i < state.length; i++) {
-                if (state[i].prodId == action.payload.product.prodId) {
-                    return state.slice(0, i)
-                        .concat({
-                            ...state[i],
-                            quantity: state[i].quantity + 1
-                        })
-                        .concat(state.slice(i + 1))
-                }
-            }
+
         default:
             return state
     }

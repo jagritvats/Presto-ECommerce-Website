@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Link, useHistory } from 'react-router-dom'
 import './Navbar.css';
 
@@ -14,12 +14,13 @@ import account from "../images/nav/account.svg"
 import highlightOffWhite from "../images/nav/highlightOffWhite.svg"
 import person from '../images/others/person.svg'
 
+import SignOutButton from './layout/SignOutButton'
 
 function Navbar() {
 
     let history = useHistory();
 
-    let auth = false;
+    let auth = useSelector(state => state.auth);
 
     const cart = useSelector(state => state.cart);
     const [showMenu, setshowMenu] = useState(false)
@@ -50,8 +51,8 @@ function Navbar() {
                             ))}
                             
                             {
-                                auth?
-                                    <li><button>Sign out</button></li>
+                                auth.isLoggedIn?
+                                    <li><SignOutButton /></li>
                                 :
                                     <li><img src={person} alt="" /><Link to="account">Register/Login</Link></li>
                             }

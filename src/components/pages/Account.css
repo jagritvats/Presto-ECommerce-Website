@@ -7,6 +7,18 @@
     background-color: aliceblue;
     padding-bottom: 65px;
 }
+
+
+
+.profile .details h3{
+    margin-top:2em;
+    margin-bottom: 1em;
+}
+
+.profile .details{
+    width: 40%;
+}
+
 /* #log_Res_But{
     display: flex;
     flex-direction: column;
