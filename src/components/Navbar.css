@@ -27,7 +27,7 @@
 
 }
 
-.website-name a{
+.website-name a,.account{
     color:white; /*overriding link color*/
 }
 

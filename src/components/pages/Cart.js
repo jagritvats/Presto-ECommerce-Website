@@ -1,15 +1,18 @@
-import React,{useEffect} from 'react';
-import {useSelector} from 'react-redux'
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux'
 import CartItem from '../layout/CartItem';
 
-import {Link} from 'react-router-dom';
-// import CircularProgress from '@material-ui/core/CircularProgress';
+import { Link, useHistory } from 'react-router-dom';
 
 import './Cart.css'
 
 function Cart() {
 
-    const cart = useSelector(state=> state.cart);
+    const cart = useSelector(state => state.cart);
+    const authSt = useSelector(state => state.auth)
+    let auth=authSt.isLoggedIn;
+
+    let history = useHistory();
 
     let qty = 0;
     let totalPrice = 0;
@@ -19,9 +22,9 @@ function Cart() {
         totalPrice += (cartItem.price * cartItem.quantity)
     });
 
-    useEffect(()=>{
+    useEffect(() => {
 
-    },[cart])
+    }, [cart])
 
     return (
         <div className="cartContainer">
@@ -31,53 +34,70 @@ function Cart() {
                 <div className="cart__nested">
                     <div className="cartItems">
 
-                    {cart.length?
-                        cart.map((prod)=>(
-                            <CartItem product={prod} key={prod.prodId}/>
-                        ))
-                    :
-                        <div><p>No Items in Cart</p></div>
-                    }
+                        {cart.length ?
+                            cart.map((prod) => (
+                                <CartItem product={prod} key={prod.prodId} />
+                            ))
+                            :
+                            <div><p>No Items in Cart</p></div>
+                        }
                     </div>
+                    
+                    {
+                        qty>0?
+                        <div className="cartSummary">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Subtotal ( {qty} items)</td>
+                                        <td>$ {totalPrice.toFixed(2)}</td>
+                                    </tr>
 
-                    <div className="cartSummary">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Subtotal</td>
-                                <td>$ {totalPrice}</td>
-                            </tr>
+                                    <tr>
+                                        <td>Delivery</td>
+                                        <td>Free</td>
+                                    </tr>
 
-                            <tr>
-                                <td>Delivery</td>
-                                <td>Free</td>
-                            </tr>
+                                    <tr>
+                                        <td>Taxes and fees</td>
+                                        <td>--</td>
+                                    </tr>
 
-                            <tr>
-                                <td>Taxes and fees</td>
-                                <td>--</td>
-                            </tr>
+                                    <tr className="cartTotal">
+                                        <td>Est. total</td>
+                                        <td className="boldPrice">$ {totalPrice.toFixed(2)}</td>
+                                    </tr>
 
-                            <tr className="cartTotal">
-                                <td>Est. total</td>
-                                <td className="boldPrice">$ {totalPrice}</td>
-                            </tr>
+                                </tbody>
+                            </table>
 
-                        </tbody>
-                    </table>
+                            <button onClick={() => { 
+                                if(auth){
+                                    history.push("/checkout") 
+                                }else{
+                                    alert("Login First!, redirecting to login page in 1 seconds")
+                                    setTimeout(()=>{
+                                        history.push('/account')
+                                    },1000)
+                                }
+                                
+                            }} className="btn btn-checkout">
+                                Check out
+                        </button>
 
-                    <Link to="/checkout" className="btn btn-checkout">
-                        Check out
-                    </Link>
-
-                    <p><span className="purple">Congrats</span> - you get <span className="purple">free delivery</span>!</p>
+                            <p><span className="purple">Congrats</span> - you get <span className="purple">free delivery</span>!</p>
 
 
+                        </div>
+                        :
+                            <div className="emptyCartSidebox">
+                                <p></p>
+                            </div>
+                    }
+                    
                 </div>
 
-                </div>
-
-                </div>
+            </div>
 
 
             {/* <CircularProgress/> */}

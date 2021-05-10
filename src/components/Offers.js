@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './Offers.css';
 
 import GroceryImg from '../images/offers_groceries.jpg'
@@ -9,7 +9,7 @@ import OfferItem from './layout/OfferItem';
 
 function Offers() {
 
-    let [offers,setOffers] = useState([
+    const offers = [
         {
             img:GroceryImg,
             topTitle:'Pickup or delivery',
@@ -22,19 +22,19 @@ function Offers() {
             img:CardImg,
             topTitle:'Earn 5% cash back',
             title:'Earn 5% cash back',
-            description:'every day on Walmart.com',
+            description:'every day on Presto.com',
             btnText: 'Learn how',
             link: ''
         },
         {
             img:PlusImg,
             topTitle:'No order minimum shipping',
-            title:'For Walmart+ members',
+            title:'For Presto+ members',
             description:'Start your free trial today. Restrictions apply',
             btnText: 'Try it free',
             link: ''
         }
-    ]);
+    ];
 
     let id=1;
 

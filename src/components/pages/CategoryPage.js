@@ -21,7 +21,7 @@ function CategoryPage() {
         },
         {
             id:3,
-            name:"Women's clothing",
+            name:"Furniture",
         },
         {
             id:4,
@@ -29,11 +29,27 @@ function CategoryPage() {
         },
         {
             id:5,
-            name:'Furniture',
+            name:"Women's clothing",
         },
         {
             id:6,
             name:'Auto & Tires',
+        },
+        {
+            id:7,
+            name:"Men's Clothing",
+        },
+        {
+            id:8,
+            name:'Home',
+        },
+        {
+            id:9,
+            name:'Outdoors',
+        },
+        {
+            id:10,
+            name:'Food',
         }
     ];
 
@@ -56,24 +72,34 @@ function CategoryPage() {
     },[])
 
     let id=0;
+    const cc = categories.find(category => category.id == catId); // current Category
+    
+
 
     return (
         <div>
-            <h2>{categories.find(category => category.id == catId).name}</h2>
-            
-            <div className="categoryProducts">
-                {
-                    catProds.length?
-                    catProds.map((product)=>(
-                        <Product key={id++} product={product}/>
-                    ))
-                    :
-                    <div>
-                        <p>Sorry, We don't have any products of this category yet</p>
-                    </div>
-                }
-            </div>
-        </div>
+            {
+                cc?
+                    <>
+                        <h2>{cc.name}</h2>
+                    
+                        <div className="categoryProducts productsCont">
+                            {
+                                catProds.length?
+                                catProds.map((product)=>(
+                                    <Product key={id++} product={product}/>
+                                ))
+                                :
+                                <div>
+                                    <p>Sorry, We don't have any products of this category yet</p>
+                                </div>
+                            }
+                        </div>
+                    </>
+                :
+                    <div><p>This Category Doesn't Exist</p></div>
+            }
+        </div>    
     )
 }
 

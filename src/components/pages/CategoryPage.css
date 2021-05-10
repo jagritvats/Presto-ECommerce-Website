@@ -1,7 +1,11 @@
-
-
+h2{
+    padding-top: 2em;
+}
 .categoryProducts{
+    margin: 1em;
     display: flex;
     flex-flow:row wrap;
     gap:2em;
+    justify-content: center;
 }
+

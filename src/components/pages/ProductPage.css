@@ -13,16 +13,89 @@
 
 .productPage img{
     width: 100%;
+    /* height: fit-content; */
+    width: 70%;
 }
 
 .topDetails{
+    padding-top: 2em;
     display: flex;
     flex-wrap: wrap;
     gap:4em;
 }
 
+.mainDetails{
+    display: flex;
+    flex-direction: column;
+    gap:0.4em;
+}
+
+/* .qtyCont{
+
+} */
+
+.soldBy{
+    padding: 1em 1em;
+    /* margin */
+    border-top: 1px solid #e9eaea;
+    border-bottom: 1px solid #e9eaea;
+}
+
+.deliveryBox{
+    margin:1em 0em;
+    box-shadow: 0px 0px 2px 1px #e5e5e5;
+    padding:1em;
+    border-radius: 4px;
+}
+
+.arrivesBy{
+    padding-left: 24px;
+}
+
+/* Icons */
+.deliveryBox img{
+    width: 20px;
+    height: 20px;
+}
+
+/* Images*/
+
 .prodImgs{
-    width:30%;
+    width:40%;
+    display: flex; /*Side Images and main Image in same row*/
+    gap:1em;
+    /* height: fit-content; */
+    flex-shrink: 0;
+}
+
+
+/* Other Images of the product at side */
+.allImgs{
+    width: 15%;
+    margin-right: 1em;
+    gap:0.6em;
+    user-select: none;/*Meaningles selection ruins experience*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.allImgs:hover{
+    cursor: pointer;
+}
+
+.sideImg{
+    border-bottom: 2px solid transparent; /*So the borders don't push other elements down on selection change*/
+}
+
+.selectedSmallImg{
+    border-bottom: 2px solid #0071dc;
+}
+
+/* Product Name */
+.mainDetails h3{
+    font-size: 1.6em;
+    max-width: 25em;
 }
 
 .productPage .cart-btn{
@@ -38,15 +111,22 @@
     background-color: #005fb8;
 }
 
-table{
-    width: 90%;
+
+.currentPrice{
+    font-size: 2em;
 }
 
-td{
+/* Specifications Table */
+
+table{
+    width: 100%;
+}
+
+.productPage td{
     padding:1em;
 }
 
-tr:nth-child(2n+ 1){
+.productPage tr:nth-child(2n+ 1){
     background-color: #f4f4f5;
 }
 
@@ -58,4 +138,21 @@ tr:nth-child(2n+ 1){
 .review{
     padding:1em 0em;
     border-bottom: 1px solid #e9eaea;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:1100px) {
+
+    .prodImgs{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+
+    .prodImgs{
+        width: 100%;
+    }
 }

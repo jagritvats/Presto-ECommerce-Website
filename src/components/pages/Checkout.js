@@ -1,10 +1,34 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Checkout.css'
 import Navbar from "../Navbar"
+import {useHistory} from 'react-router-dom'
+
+import { useSelector } from 'react-redux'
 
 function Checkout() {
-    return (
-        <div>
+
+  let history = useHistory();
+
+  const cart = useSelector(state => state.cart);
+
+  let auth = useSelector(state => state.auth);
+
+  useEffect(() => {
+    if(!auth.isLoggedIn){
+      alert("Not Logged In")
+      history.push("/account")
+    }
+  }, [auth])
+
+
+  let price = 0;
+
+  cart.forEach(cartItem => {
+    price += (cartItem.price * cartItem.quantity)
+  });
+
+  return (
+    <div>
       <div className="checkout">
         <div className="checkOutDetails">
           <form className="full-detail">
@@ -108,7 +132,7 @@ function Checkout() {
                           </select>
                         </div>
                       </label>
-                      <label style={{ width: "40%" }}> CVV*: <input type="number" name="cvv" required min="100" max="999"  /> </label>
+                      <label style={{ width: "40%" }}> CVV*: <input type="number" name="cvv" required min="100" max="999" /> </label>
                     </div>
                     <label> Phone number* (7009215892): <input type="number" name="pnumber" required max="1000000000" max="9999999999" /> </label>
                   </div>
@@ -122,7 +146,7 @@ function Checkout() {
               <div className="subtotal">
                 <div className="displayFlex">
                   <div>Subtotal</div>
-                  <div>$78</div>
+                  <div>${price}</div>
                 </div>
                 <div className="displayFlex">
                   <div>Delivery</div>
@@ -131,7 +155,7 @@ function Checkout() {
                 <hr />
                 <div className="displayFlex">
                   <div>Total</div>
-                  <div><b>$78</b></div>
+                  <div><b>${price.toFixed(2)}</b></div>
                 </div>
                 <hr />
                 <button type="submit" className="submitCheckout">Place a Order</button>
@@ -142,7 +166,7 @@ function Checkout() {
       </div>
 
     </div>
-    )
+  )
 }
 
 export default Checkout
