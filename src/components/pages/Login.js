@@ -15,7 +15,6 @@ export const Login = ({ setLogin }) => {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    console.log(email)
     dispatch(loadAuth())
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
