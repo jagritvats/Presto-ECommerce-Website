@@ -5,7 +5,7 @@
 
 .cart__nested{
     display: flex;
-    
+    flex-wrap: wrap;
 }
 
 .cartItems{
@@ -51,4 +51,18 @@
 
 .btn-checkout:disabled:hover{
     cursor: not-allowed;
+}
+
+
+@media screen and (max-width:900px){
+
+    .cartItems{
+        width: 90%;
+        border-right:none;
+    }
+
+    .cartSummary{
+        width: 90%;
+        padding: 1em 1.2em;
+    }
 }
