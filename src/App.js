@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Checkout from './components/pages/Checkout'
 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {HashRouter ,BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import ProductPage from './components/pages/ProductPage';
 import CategoryPage from './components/pages/CategoryPage';
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
 
 
-      <Router>
+      <HashRouter>
         <Navbar cart={[]}/>
           <ScrollToTop/>
           <AuthChangeDetect />
@@ -36,7 +36,7 @@ function App() {
           <Route> <div> <p>This page doesn't exist, you're lost :( , go back to hompage</p> </div> </Route>
         </Switch>
         <Footer />
-      </Router>
+      </HashRouter>
       
     </div>
   );
