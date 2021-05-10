@@ -38,6 +38,18 @@ export const reduceByOne = (product) => {
     }
 }
 
+export const loadAuth = () => {
+    return{
+        type:'LOADING_AUTH'
+    }
+}
+
+export const loadedAuth = () => {
+    return{
+        type:'LOADED_AUTH'
+    }
+}
+
 export const lgout = () => {
     return dispatch => {
   

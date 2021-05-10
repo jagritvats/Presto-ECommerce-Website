@@ -2,7 +2,7 @@ import React from "react";
 import loginImg from "../../images/account/login.svg";
 
 import {useDispatch} from 'react-redux'
-import {doLogin} from '../../actions'
+import {loadAuth} from '../../actions'
 
 
 export const Login = ({ setLogin }) => {
@@ -15,12 +15,12 @@ export const Login = ({ setLogin }) => {
     var password = document.getElementById("password").value;
 
     console.log(email)
+    dispatch(loadAuth())
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
 
       var user = userCredential.user;
       console.log(user)
-      // dispatch(doLogin(auth))
 
     })
     .catch((error) => {

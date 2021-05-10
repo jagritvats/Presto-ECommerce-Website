@@ -8,7 +8,9 @@
     padding-bottom: 65px;
 }
 
-
+.loading{
+    padding: 3em;
+}
 
 .profile h3{
     margin-top:2em;
