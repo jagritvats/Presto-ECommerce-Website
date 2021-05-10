@@ -6,11 +6,6 @@ import Checkout from './components/pages/Checkout'
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import {useEffect} from 'react';
-
-import { useDispatch} from 'react-redux'
-import { doLogin } from './actions'
-
 import ProductPage from './components/pages/ProductPage';
 import CategoryPage from './components/pages/CategoryPage';
 import Cart from './components/pages/Cart';
@@ -18,18 +13,11 @@ import Search from './components/Search';
 
 import ScrollToTop from './components/functionality/ScrollToTop'
 import Account from './components/pages/Account';
+import AuthChangeDetect from './components/functionality/AuthChangeDetect';
 
 function App() {
 
-  const dispatch = useDispatch();
-  useEffect(() => {
-      firebase.auth().onAuthStateChanged(user => {
-          console.log(user)
-          if (user) {
-              dispatch(doLogin(user))
-          }
-      })
-  }, [])
+
 
   return (
     <div className="App">
@@ -38,6 +26,7 @@ function App() {
       <Router>
         <Navbar cart={[]}/>
           <ScrollToTop/>
+          <AuthChangeDetect />
         <Switch>
           <Route exact path="/" component={Homepage}/>
           <Route exact path="/product/:id" component={ProductPage}/>

@@ -20,7 +20,7 @@ export const Login = ({ setLogin }) => {
 
       var user = userCredential.user;
       console.log(user)
-      dispatch(doLogin(auth))
+      // dispatch(doLogin(auth))
 
     })
     .catch((error) => {

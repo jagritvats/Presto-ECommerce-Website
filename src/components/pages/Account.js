@@ -19,8 +19,9 @@ const Account = () => {
             {
                 authObj ?
                     <div className="profile">
+                        <h3>Profile Details</h3>
                         <table className="details">
-                            <h3>Profile Details</h3>
+                           
                             <tbody>
                                 <tr>
                                     <td>Name:</td>
