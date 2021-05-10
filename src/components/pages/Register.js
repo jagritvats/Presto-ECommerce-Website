@@ -56,7 +56,7 @@ const Register = ({ setLogin }) => {
           </div>
           <div className="form-group">
             <label htmlFor="password">Password</label>
-            <input type="text" name="password" placeholder="password" id="rpassword"/>
+            <input type="password" name="password" placeholder="password" id="rpassword"/>
           </div>
         </div>
       </div>

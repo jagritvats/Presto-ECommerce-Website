@@ -1,6 +1,4 @@
-// if using authetication, when we bring cart then we have to update products cart prop
 
-// const initCart = sessionStorage.getItem("cart");
 const initCart = sessionStorage.getItem('localCart') 
                        ? JSON.parse(sessionStorage.getItem('localCart'))
                        : []
