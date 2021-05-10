@@ -8,6 +8,7 @@ import { doLogin, loadedAuth } from '../../actions'
 function AuthChangeDetect() {
 
     useEffect(()=>{
+
         var firebaseConfig = {
           apiKey: "AIzaSyBqP8VkaO2hGReJvc6JGZnHcvzAIIycDd0",
           authDomain: "ecommerce-188e7.firebaseapp.com",
@@ -19,7 +20,7 @@ function AuthChangeDetect() {
         };
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
-      },[])
+    },[])
 
     const dispatch = useDispatch();
 
@@ -34,6 +35,7 @@ function AuthChangeDetect() {
             dispatch(loadedAuth())
         })
     }, [])
+    
     return (
         <> 
         </>

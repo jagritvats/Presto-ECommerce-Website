@@ -149,9 +149,7 @@ const products = [
 
     {
         prodId: 1,
-        model: 'D3500',
-        // complexId:'ST102231',
-        img: product_1_img_1,
+        model: 'D3500',img: product_1_img_1,
         imgs: [
             product_1_img_1,
             product_1_img_2,
@@ -162,9 +160,6 @@ const products = [
         description: "Compact, comfortable design That's great for travel and Special eventsImage sensor That's 15x larger than those Used in Typical smartphones for sharper, clearer picturesWorks with Nikon's snapbridge app for sharing photos with a compatible smartphone or tablet1080P full HD videos with monaural sound at the touch of a buttonCompact, easy to use, and versatile are all traits of the Nikon D3500, which is designed to be as flexible and intuitive as possible, while still offering the imaging capabilities you expect from a DSLR. Utilizing a DX-format 24.2MP CMOS sensor and EXPEED 4 image processor, the D3500 provides a native sensitivity range from ISO 100-25600 to suit working in a variety of lighting conditions, and the sensor and processor combination also provides a 5 fps continuous shooting rate as well as Full HD 1080p video recording at 60 fps. The sensor's design also omits an optical low-pass filter in order to achieve greater sharpness and resolution from both photos and videos. Complementing the imaging capabilities, the D3500 also features SnapBridge, which utilizes Bluetooth connectivity, for wireless sharing of images to your mobile device, including automatic sharing of 2MP images between the camera and your mobile device.",
         maxPrice: 790.99,
         price: 572.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Nikon"],
@@ -177,26 +172,26 @@ const products = [
                 author: 'Alice',
                 title: "Great camera",
                 description: "This is a great beginner camera! I bought this for my son and he loves it. He uses it a lot for his school projects. Has lots of great features!",
-                date: new Date(2021, 4, 21), // maybe a string date ,non functional
+                date: new Date(2021, 4, 21),
                 stars: 5
             },
             {
                 author: 'Haley',
                 title: "Great beginner camera!",
                 description: "Great beginner camera and it's helping me learn how to shoot in manual modes. takes clear photos and I take it everywhere with me for those moments you wish you had more than just your phone to capture the experience.",
-                date: new Date(2020, 9, 6), // maybe a string date ,non functional
+                date: new Date(2020, 9, 6),
                 stars: 4
             },
             {
                 author: 'Kenneth',
                 title: "Dont buy",
                 description: "This is not a us product. This is a gray market product that included no warranty info nor user guide/manual. You will not have any company warranty on this purchase. I returned the product immediately and repurchased elsewhere.",
-                date: new Date(2021, 4, 6), // maybe a string date ,non functional
+                date: new Date(2021, 4, 6),
                 stars: 1
             }
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -204,11 +199,10 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 2,
-        model: 'SM-T500NZAAXAR',
-        // complexId:'ST102231',
-        img: product_2_img_1,
+        model: 'SM-T500NZAAXAR',img: product_2_img_1,
         imgs: [
             product_2_img_1,
             product_2_img_2,
@@ -221,9 +215,6 @@ const products = [
         maxPrice: 572.99,
 
         price: 269.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Mazepoly"],
@@ -255,8 +246,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -267,8 +258,6 @@ const products = [
 
     {
         prodId: 3,
-        // model:'',
-        // complexId:'ST102231',
         img: product_3_img_1,
         imgs: [
             product_3_img_1,
@@ -281,9 +270,6 @@ const products = [
         description: "iPhone 12 Pro Max. 5G to download huge files on the go and stream HDR video.1 Larger 6.7-inch Super Retina XDR display.2 Ceramic Shield with 4x better drop performance.3 Incredible low-light photography with the best Pro camera system on an iPhone, and 5x optical zoom range. Cinema-grade Dolby Vision video recording, editing, and playback. Night mode portraits and next-level AR experiences with the LiDAR Scanner. ",
         maxPrice: 52.80,
         price: 31.63,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Apple"],
@@ -315,8 +301,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -325,14 +311,8 @@ const products = [
         }
     },
 
-
-
-
-
     {
         prodId: 4,
-        // model:'',
-        // complexId:'ST102231',
         img: product_4_img_1,
         imgs: [
             product_4_img_1,
@@ -345,9 +325,6 @@ const products = [
         description: "Dangling wires can get in the way for the individual on the move.Enjoy TWS wireless technology, without sacrificing sound quality.These truly wireless earphones will work with your favorite device up to 33 feet way.Charge on the go with the compact and portable wireless charging dock– it offers 18 hours of charge time and 5 hours of playtime so you can listen all day and charge on the go.",
         maxPrice: 29.99,
         price: 21.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Woozik"],
@@ -379,8 +356,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -389,13 +366,9 @@ const products = [
         }
     },
 
-
-
-
     {
         prodId: 5,
         model: 'Blizzard ',
-        // complexId:'ST102231',
         img: product_5_img_1,
         imgs: [
             product_5_img_1,
@@ -408,9 +381,6 @@ const products = [
         description: "We aim to show you accurate product information. Manufacturers, suppliers and others provide what you see here, and we have not verified it.Introducing the Blizzard (AMD) Gaming PC Computer Desktop We set out to build the ultimate gaming PC. Although we test each build to ensure it can handle most popular games, please check the minimum specs for the specific game you want to play to make sure this computer meets those.",
         maxPrice: 1000.65,
         price: 899.95,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "ViprTech"],
@@ -442,8 +412,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -452,15 +422,9 @@ const products = [
         }
     },
 
-
-
-
-
     {
         prodId: 6,
-        model: 'DS-940DW',
-        // complexId:'ST102231',
-        img: product_6_img_1,
+        model: 'DS-940DW',img: product_6_img_1,
         imgs: [
             product_6_img_1,
             product_6_img_2,
@@ -472,9 +436,6 @@ const products = [
         description: "The Brother DS-940DW duplex and wireless compact mobile document scanner is ideally suited for on-the-go, small office/home office professionals featuring its compact, mobile design and simple workflow applications. The DS-940DW features single-pass duplex scanning and a color scan speed of up to 16ppm(1) (a single page in as little as 4 seconds)(1). This scanner can wirelessly scan to PC’s, mobile devices, and with the Brother free iPrint&Scan app, scan to cloud services and network destinations(2). The DS-940DW is compatible with the way you work. Its compact size and mobility combined with fast scan speeds and image optimization features, make it a perfect fit for usage on the road, in the home or small office. ",
         maxPrice: 220.88,
         price: 179.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Brother"],
@@ -506,8 +467,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -516,18 +477,9 @@ const products = [
         }
     },
 
-
-
-
-
-
-
-
     {
         prodId: 7,
-        model: 'MTF02LL/A',
-        // complexId:'ST102231',
-        img: product_7_img_1,
+        model: 'MTF02LL/A',img: product_7_img_1,
         imgs: [
             product_7_img_1,
             product_7_img_2,
@@ -538,9 +490,6 @@ const products = [
         description: "Stay on top of your fitness with this Apple Watch Series 3. It allows you to measure your workouts, from running and cycling to high-intensity interval training. This Apple Watch includes an Apple sport band and comes in an aluminum case. Track and share your daily activity, and get the motivation you need to hit your goals.",
         maxPrice: 199.00,
         price: 169.00,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Apple"],
@@ -572,8 +521,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -582,18 +531,9 @@ const products = [
         }
     },
 
-
-
-
-
-
-
-
     {
         prodId: 8,
-        model: 'AX1500',
-        // complexId:'ST102231',
-        img: product_8_img_1,
+        model: 'AX1500',img: product_8_img_1,
         imgs: [
             product_8_img_1,
             product_8_img_2,
@@ -605,9 +545,6 @@ const products = [
         description: "The Archer AX1500 dual-band router comes equipped with the latest Wi-Fi 6 wireless technology for faster speeds, increased capacity and reduced network congestion. Reaching speeds up to 1.5 Gbps, AX1500 lets you experience buffer-free 4K/HD streaming and gaming. With more and more devices in your home, your current router will likely begin to slow down. ",
         maxPrice: 79.00,
         price: 69.00,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "TP-Link"],
@@ -639,8 +576,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -651,9 +588,7 @@ const products = [
 
     {
         prodId: 9,
-        model: 'V705-H',
-        // complexId:'ST102231',
-        img: product_9_img_1,
+        model: 'V705-H',img: product_9_img_1,
         imgs: [
             product_9_img_1,
             product_9_img_2,
@@ -665,9 +600,6 @@ const products = [
         description: "Discover the wonder of 4K entertainment with the all-new VIZIO V-Series 4K HDR Smart TV, combining 4K Ultra HD resolution and full array backlighting with Dolby Vision high dynamic range and the IQ Active processor to achieve jaw-dropping picture quality. Apple AirPlay 2 and Chromecast built-in, browse Netflix, Hulu, Disney+, and YouTube, or specially curated content with Free Streaming Channels.",
         maxPrice: 758.00,
         price: 588.00,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Resolution", "4K UHD"],
@@ -680,26 +612,26 @@ const products = [
                 author: 'Alice',
                 title: "Great camera",
                 description: "This is a great beginner camera! I bought this for my son and he loves it. He uses it a lot for his school projects. Has lots of great features!",
-                date: new Date(2021, 4, 21), // maybe a string date ,non functional
+                date: new Date(2021, 4, 21),
                 stars: 5
             },
             {
                 author: 'Haley',
                 title: "Great beginner camera!",
                 description: "Great beginner camera and it's helping me learn how to shoot in manual modes. takes clear photos and I take it everywhere with me for those moments you wish you had more than just your phone to capture the experience.",
-                date: new Date(2020, 9, 6), // maybe a string date ,non functional
+                date: new Date(2020, 9, 6),
                 stars: 4
             },
             {
                 author: 'Kenneth',
                 title: "Dont buy",
                 description: "This is not a us product. This is a gray market product that included no warranty info nor user guide/manual. You will not have any company warranty on this purchase. I returned the product immediately and repurchased elsewhere.",
-                date: new Date(2021, 4, 6), // maybe a string date ,non functional
+                date: new Date(2021, 4, 6),
                 stars: 1
             }
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
@@ -708,12 +640,9 @@ const products = [
         }
     },
 
-
     {
         prodId: 10,
-        model: 'VIPRB-I7373-5558GRY-PUS',
-        // complexId:'ST102231',
-        img: product_10_img_1,
+        model: 'VIPRB-I7373-5558GRY-PUS',img: product_10_img_1,
         imgs: [
             product_10_img_1,
             product_10_img_2,
@@ -725,9 +654,6 @@ const products = [
         description: "This item is REFURBISHED* Dell Inspiron 2-in-1 13.3 Touch-Screen Laptop i5-8250U 8GB RAM 256GB SSD. This item was manufactured in 2017.Dell Inspiron 2-in-1 13.3 Touch-Screen Laptop i5-8250U 8GB RAM 256GB SSD. Manufactured in 2017.",
         maxPrice: 879.00,
         price: 513.00,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Type", "Intel Core i5"],
@@ -759,19 +685,19 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Electronics",
         categoryId: 1,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 11,
-        model: '',
-        // complexId:'ST102231',
-        img: product_1_img_1,
+        model: '',img: product_11_img_1,
         imgs: [
             product_11_img_1,
             product_11_img_2,
@@ -782,9 +708,6 @@ const products = [
         description: "Play Has No Limits™PlayStation®5 The PS5™ console unleashes new gaming possibilities that you never anticipated. Experience lightning fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, and 3D Audio*, and an all-new generation of incredible PlayStation® games. Lightning Speed Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation® console can do. Stunning Games Marvel at incredible graphics and experience new PS5",
         maxPrice: 600,
         price: 499,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Sony"],
@@ -816,8 +739,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
@@ -826,13 +749,8 @@ const products = [
         }
     },
 
-
-
-
     {
         prodId: 12,
-        // model:'',
-        // complexId:'ST102231',
         img: product_12_img_1,
         imgs: [
             product_12_img_1,
@@ -843,9 +761,6 @@ const products = [
         description: "Discover a deeper, highly immersive gaming experience that brings the action to life in the palms of your hands.The DualSense wireless controller offers immersive haptic feedback, dynamic adaptive triggers, and a built-in microphone, all integrated into an iconic comfortable design.Charge and play, now via USB Type-C. Select games take on an extra dimension with higher-fidelity sound effects bursting from the controller.Bring intuitive motion control to supported games with the built-in accelerometer and gyroscope",
         maxPrice: 70,
         price: 63,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Video Game Platform", "PlayStation 5"],
@@ -877,8 +792,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
@@ -887,14 +802,8 @@ const products = [
         }
     },
 
-
-
-
-
     {
         prodId: 13,
-        // model:'',
-        // complexId:'ST102231',
         img: product_13_img_1,
         imgs: [
             product_13_img_1,
@@ -906,9 +815,6 @@ const products = [
         description: "100% brand new and high quality. Resolution based on the film source. With MECO 3D VR Storm Glasses, you can turn your smartphone into a virtual reality viewer, which takes you into an immersive, amusing and exciting VR world. Adjustable Pupil Distance and Sight Distance Pupil distance and object distances are adjustable to satisfy different groups of people, providing the best 3D experience.",
         maxPrice: 159.89,
         price: 129.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Sony"],
@@ -940,8 +846,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
@@ -949,10 +855,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 14,
-        // model:'',
-        // complexId:'ST102231',
         img: product_14_img_1,
         imgs: [
             product_14_img_1,
@@ -964,9 +869,6 @@ const products = [
         description: "GameSir T1s is compatible with Bluetooth 4.0/2.4Ghz/wired connection.and working great with Android smartphone / tablet / smart TV / TV box / Windows(PC) XP/7/8/10 / PlayStation 3 / Samsung Gear VR",
         maxPrice: 39.99,
         price: 32.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Video Game Platform", "PlayStation 3"],
@@ -998,18 +900,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 15,
-        // model:'',
-        // complexId:'ST102231',
         img: product_15_img_1,
         imgs: [
             product_15_img_1,
@@ -1022,9 +924,6 @@ const products = [
         description: "The only console designed to play the best games of the past, present and future Play over 2,200 games including more than 200 exclusives and over 550 classics from Xbox 360 and Original Xbox. The best in 4K entertainment Watch 4K Blu-ray? movies and stream 4K video on Netflix, Amazon, Hulu, and more and experience richer, more luminous colors in games and video with High Dynamic Range technology.Connect and play with friends and family on Xbox Live, the fastest, most reliable gaming network The most advanced multiplayer network provides steady gameplay and fast downloads. Enjoy Xbox Game Pass Xbox Game Pass gives you instant, unlimited access to over 100 highly-rated and fun games, with new games being added all the time. Xbox Play Anywhere Enjoy the freedom of Xbox Play Anywhere games on both Xbox One and Windows 10 PC at no additional cost. Accessories Xbox One games and accessories work together.",
         maxPrice: 780,
         price: 729,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Microsoft"],
@@ -1056,18 +955,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 16,
-        // model:'',
-        // complexId:'ST102231',
         img: product_16_img_1,
         imgs: [
             product_16_img_1,
@@ -1080,9 +979,6 @@ const products = [
         description: "Get the gaming system that lets you play the games you want, wherever you are, however you like. Includes the Nintendo Switch console and Nintendo Switch dock in black, and left and right Joy Con controllers in a contrasting gray. Also includes all the extras you need to get started. Model number: HAC-001(-01) (product serial number begins with This model includes battery life of approximately 4.5 - 9 hours . The battery life will depend on the games you play. For instance, the battery will last approximately 5.5 hours for The Legend of Zelda: Breath of the Wild (games sold separately).",
         maxPrice: 399,
         price: 344,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Nintendo"],
@@ -1114,18 +1010,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 17,
-        // model:'',
-        // complexId:'ST102231',
         img: product_17_img_1,
         imgs: [
             product_17_img_1,
@@ -1138,9 +1034,6 @@ const products = [
         description: "This PowerA Enhanced Wired Controller is officially licensed for Xbox Series X|S or Xbox One with added features to enhance your gaming experience. Check out the new Share button for in-game screen captures or video clips, or quickly adjust volume or mute just the chat channel in your wired stereo headset via the conveniently located Headset Dial. Gain a competitive advantage by mapping two Advanced Gaming Buttons on the fly, plus get all the features you expect like dual rumble motors, standard ergonomic layout, 3.5mm stereo headset jack and precision-tuned analog sticks with anti-friction rings for smoother motion. For style and comfort, the metallic D-Pad and diamond-textured grip makes this controller feel truly amazing. Our wired controller with 10ft (3m) USB cable ensures a lag-free gaming session and lets you play until you drop without worrying about batteries. Finally, we reinforce our commitment to quality with two-years of support, ensuring you can trust PowerA products to perform.",
         maxPrice: 39.99,
         price: 29.88,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "PowerA"],
@@ -1172,18 +1065,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 18,
-        // model:'',
-        // complexId:'ST102231',
         img: product_18_img_1,
         imgs: [
             product_18_img_1,
@@ -1196,9 +1089,6 @@ const products = [
         description: "Marvel’s Avengers begins at A-Day, where Captain America, Iron Man, the Hulk, Black Widow, and Thor are unveiling a new, hi-tech Avengers Headquarters in San Francisco. The celebration turns deadly when a mysterious enemy causes a catastrophic accident which results in massive devastation. Blamed for the tragedy, the Avengers disband. Five years later, with all Super Heroes outlawed and the world in peril, a sprawling adventure ignites when a determined young woman named Kamala Khan sets out to reassemble and rebuild the Avengers to stop the unchecked power of the secretive new force known as AIM.Marvel’s Avengers continues the epic journey with new Heroes and new narrative delivered on an ongoing basis, for the definitive Avengers gaming experience.",
         maxPrice: 59.99,
         price: 24.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Video Game Platform", "PlayStation 4"],
@@ -1230,18 +1120,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 19,
-        // model:'',
-        // complexId:'ST102231',
         img: product_19_img_1,
         imgs: [
             product_19_img_1,
@@ -1254,9 +1144,6 @@ const products = [
         description: "The 57” tall arcade (on a riser) has a 4-player control deck with real feel joysticks and control buttons. The Arcade1Up NBA JAM arcade features original artwork on the machine and includes a custom riser. These features, combined with full-color 17” LCD display and dual speakers, will provide you with endless hours of gaming for you and three of your friends! The machine is easy to assemble, includes a deck protector and has a variable volume switch.",
         maxPrice: 499,
         price: 399,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "NBA Elevation"],
@@ -1288,18 +1175,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 20,
-        // model:'',
-        // complexId:'ST102231',
         img: product_20_img_1,
         imgs: [
             product_20_img_1,
@@ -1312,9 +1199,6 @@ const products = [
         description: 'Stay busy for many hours with the My Arcade Gamer V Portable Gaming System 220 2.4" LCD Screen Black from dreamGEAR. Soar the skies, solve puzzles, play golf or tennis and much more. This My Arcade gaming system comes with 220 built-in titles to keep you content. The compact design makes it easily fit in your pocket or bag. Bring this retro game console along for a family trip or anywhere else you go. Get it as a thoughtful gift idea for a birthday, holiday or any other occasion.',
         maxPrice: 25.30,
         price: 20.21,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Gender", "Unisex"],
@@ -1346,8 +1230,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Video Games",
         categoryId: 2,
         cartDetails: {
@@ -1355,10 +1239,9 @@ const products = [
             qty: 0
         }
     },
+    
     {
         prodId: 21,
-        // model:'',
-        // complexId:'ST102231',
         img: product_21_img_1,
         imgs: [
             product_21_img_1,
@@ -1371,9 +1254,6 @@ const products = [
         description: "HONBAY Convertible Sectional Sofa Couch with reversible chaise lounge has a sleek modern look that will look great with any style in your home. Soft linen fabric upholstery on hardwood frame with overstuffed back cushions and memory foam seat cushion. The more you sit in it the better. HONBAY L-shaped sofa couch is your first selection.",
         maxPrice: 443.99,
         price: 389.99,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Orientation", "Reversible"],
@@ -1405,8 +1285,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
@@ -1414,10 +1294,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 22,
-        // model:'',
-        // complexId:'ST102231',
         img: product_22_img_1,
         imgs: [
             product_22_img_1,
@@ -1430,9 +1309,6 @@ const products = [
         description: "With a stand-out design, this 58 inch storage console from Woven Paths will integrate style into your home. This TV stand will give your living room a charming country feel, while also providing plenty of storage space for your electronics and decor. Featuring two sliding barn door styled cabinet fronts for a versatile design where you can either close off the middle or both sides.",
         maxPrice: 250.00,
         price: 225.00,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Woven Paths"],
@@ -1464,8 +1340,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
@@ -1473,10 +1349,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 23,
-        // model:'',
-        // complexId:'ST102231',
         img: product_23_img_1,
         imgs: [
             product_23_img_1,
@@ -1489,9 +1364,6 @@ const products = [
         description: "Honey, give me the gorg Queer Eye Copley Coffee Table and we’ve got a SHAMAZING living room. If you’re hosting a party, and need a spot for snacks and cocktails, this table is for you! Basic, basic, basic will not do anymore! Your living space is an expression of who you are and if you haven’t noticed, you’re pretty darn fab.",
         maxPrice: 110.00,
         price: 99.00,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Queer Eye"],
@@ -1523,8 +1395,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
@@ -1532,10 +1404,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 24,
-        // model:'',
-        // complexId:'ST102231',
         img: product_24_img_1,
         imgs: [
             product_24_img_1,
@@ -1548,9 +1419,6 @@ const products = [
         description: "Add a touch of comfort to your home with the Better Homes & Gardens Papasan Chair with Cushion. Designed with a sturdy steel frame and faux wicker accents, this classic chair features a soft 4.5thick tufted seat cushion covered in rich velvet-look upholstery to create an inviting seating option for one adult. Perfect for creating a casual look in living rooms, dens, family rooms, playrooms, kids rooms, bedrooms, and more, the Better Homes & Gardens.",
         maxPrice: 200.23,
         price: 129.00,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Better Homes & Gardens"],
@@ -1582,8 +1450,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
@@ -1591,10 +1459,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 25,
-        // model:'',
-        // complexId:'ST102231',
         img: product_25_img_1,
         imgs: [
             product_25_img_1,
@@ -1607,9 +1474,6 @@ const products = [
         description: "Dress up your bedroom décor with this dresser from the Palladia collection. Find room for all your clothes and accessories in any of the six drawers that open and close on smooth metal runners. Find a little more space in one of the four extra deep bottom drawers. ",
         maxPrice: 315.02,
         price: 305.07,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Weight", "127 lb"],
@@ -1641,18 +1505,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    },
+    
+    {
         prodId: 26,
-        // model:'',
-        // complexId:'ST102231',
         img: product_26_img_1,
         imgs: [
             product_26_img_1,
@@ -1665,9 +1529,6 @@ const products = [
         description: "Add a little romance to your bedroom with the Biscayne Queen Bed with Slat Roll. This bed offers beautiful detail with a curved bottom panel and a contrasted headboard in beige with a textured print creating a romantic feel. Flowing down beneath, the bed’s long feed with slats provides an airy and c",
         maxPrice: 733.84,
         price: 278.13,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Tvilum"],
@@ -1699,8 +1560,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
@@ -1708,10 +1569,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 27,
-        // model:'',
-        // complexId:'ST102231',
         img: product_27_img_1,
         imgs: [
             product_27_img_1,
@@ -1724,9 +1584,6 @@ const products = [
         description: 'Introducing the New! CoolBreeze Extra-Firm built with the highest quality memory foam. The 12" Dry Gel takes memory foam technology to the next generation! Features a 4-layer construction made with a high density base foam, washable memory foam, and new premium dry gel memory foam will contour your body. Topped with a new modern cooling silk cover, made easy to wash with a four-way zipper. Our new design allows for a more comfortable and cooler night’s sleep for those who prefer to sleep firmer. WARRANTY: 30 Year Limited Warranty! You may return the mattress for any reason within 120 days.',
         maxPrice: 890,
         price: 698,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Dynasty Mattress"],
@@ -1758,8 +1615,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
@@ -1767,10 +1624,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 28,
-        // model:'',
-        // complexId:'ST102231',
         img: product_28_img_1,
         imgs: [
             product_28_img_1,
@@ -1783,9 +1639,6 @@ const products = [
         description: "When last-minute guests show up, the Mainstays Memory Foam Futon comfortably pulls double duty to save you space and money. Featuring a clean-lined wooden frame with durable metal legs, this impressive futon is extra seating and a foldable bed in one. Designed to take any room from day-to-night, a split seat and back design with fold-up arms quickly and easily convert the futon from a sofa to lying flat in a flash. The pillow top cushioning is constructed from extra-supportive memory foam to deliver plenty of lounge and snooze-worthy comfort. Whether you?re looking for furniture for your dorm or in need of a small-space solution for your apartment, the Mainstays Memory Foam Futon is a stylish and practical convertible sofa that works for your comfort, 24 hours a day.",
         maxPrice: 189,
         price: 159,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Features", "Upholstered"],
@@ -1817,8 +1670,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
@@ -1826,10 +1679,9 @@ const products = [
             qty: 0
         }
     },
+
     {
         prodId: 29,
-        // model:'',
-        // complexId:'ST102231',
         img: product_29_img_1,
         imgs: [
             product_29_img_1,
@@ -1842,9 +1694,6 @@ const products = [
         description: "Update the look of your dining area with the Mainstays 5-Piece Wood and Metal Dining Set. This elegant piece has a sturdy steel table frame and a wooden top with four metal chairs that have upholstered seats. The Mainstays 5-piece dining set is available in multiple colors, so you can choose the one that works best with your room decor. The upholstered seat has some cushioning, so it is comfortable to sit in whether you are just having a quick meal or relaxing with guests after a nice dinner. This compact dining set has clean lines and a modern style that works well in many different settings. Use it in your dining room to add a contemporary look or use it in the kitchen for a more casual feel. The compact size means it will fit in smaller areas such as a kitchen nook. The sturdy construction of the Mainstays 5-Piece Wood and Metal Dining Set is designed to last whether you use it every day or just on special occasions. The hardware is individually sorted to help make the assembly of the set a shorter process.",
         maxPrice: 199,
         price: 169,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Brand", "Mainstays"],
@@ -1876,18 +1725,18 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {
             inCart: false,
             qty: 0
         }
-    }, {
+    }, 
+    
+    {
         prodId: 30,
-        // model:'',
-        // complexId:'ST102231',
         img: product_30_img_1,
         imgs: [
             product_30_img_1,
@@ -1900,9 +1749,6 @@ const products = [
         description: "A little extra storage in your life is never a bad thing. This modern transitional writing desk provides unique ways of organization whether you are looking for a chic vanity in your bedroom or a place to finish up your projects in your home office. A lift top featured on each side of the desk offers hidden storage to keep surface neat. Place your tablet, phone, or book on the flip-up holder to make studying super simple. And the warp-resistant MDF wood, durable laminate, and powder-coated steel create a sturdy, contemporary laptop desk you can rely on through all your client meetings or late-night cram sessions.",
         maxPrice: 289,
         price: 245,
-        delivery: {
-            date: new Date() //current date + 2
-        },
         specifications: [
 
             ["Manufacturer", "Manor Park"],
@@ -1934,8 +1780,8 @@ const products = [
             }
 
         ],
-        stars: 3.3, // average from looping through
-        numReviews: 3, //uppper review array length
+        stars: 3.3,
+        numReviews: 3,
         category: "Furniture",
         categoryId: 3,
         cartDetails: {

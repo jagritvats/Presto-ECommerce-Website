@@ -8,8 +8,6 @@ import Slider from './Slider'
 function Homepage() {
     return (
         <div className="home">
-            {/* NavbaR */}
-            {/* Slider */}
 
             <Slider />
 

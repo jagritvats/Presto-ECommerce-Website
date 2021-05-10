@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react'
 import './Checkout.css'
-import Navbar from "../Navbar"
 import {useHistory} from 'react-router-dom'
 
 import { useSelector } from 'react-redux'

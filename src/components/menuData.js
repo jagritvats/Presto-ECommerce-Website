@@ -1,8 +1,6 @@
 import cartBlack from "../images/nav/cartblack.svg"
 import homeIcon from "../images/others/home.svg"
 
-// import listblack from "../images/listblack.svg"
-
 export const menuData =[
     {
         id:0,

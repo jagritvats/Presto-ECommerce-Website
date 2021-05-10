@@ -28,11 +28,6 @@ margin-bottom: 19px;
 display: flex;
 }
 
-/* .personal__info input {
-height: 1.5rem;
-
-} */
-
 
 /* This is For To remove Arrow In Number Input*/
 input::-webkit-outer-spin-button,
@@ -58,14 +53,12 @@ grid-gap: 20px;
 
 .perso_pay {
 width: 60vw;
-/* border: 2px solid red; */
 background: #f1f1f1;
 border-radius: 1%;
 }
 
 .subtotal {
 width: 20vw;
-/* border: 2px solid red; */
 position: sticky;
 top: 100px;
 padding: 3px;
@@ -90,9 +83,7 @@ justify-content: space-evenly;
 .perso-details select,
 .card-info input,
 .card-info select {
-/* height: 38px; */
 height: 45px;
-/* line-height: 45px; */
 padding-left: 12px;
 font-size: 1.2rem;
 
@@ -132,7 +123,6 @@ margin-bottom: 15px;
 text-shadow: -3px -1px 0px white;
 text-align: center;
 padding: 1rem;
-/* word-spacing: 0.2em; */
 font-size: 1.8rem;
 letter-spacing: 2.2px;
 }
@@ -188,7 +178,6 @@ align-items: center;
 .personal__info,
 .address {
 width: 80%;
-/* flex-direction: column; */
 }
 
 .card-info {
@@ -210,20 +199,6 @@ margin: 15px 30% 0 30%;
 
 
 }
-/* @media screen and (min-width: 557px) and (max-width: 698px) {
-
-  .perso_pay {
-    width: 100vw;
-    }
-    .subtotal {
-      width: 100vw;
-      margin: 0 10vw;
-      position: absolute ;
-      }
-      .posFixed{
-        width: 100vw;
-      }
-} */
 
 @media screen and (min-width: 557px) and (max-width: 874px) {
   .checkOutDetails form {

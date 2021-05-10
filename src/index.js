@@ -10,8 +10,9 @@ import {Provider} from 'react-redux';
 
 const store = createStore(
     allReducer, applyMiddleware(thunk)
-  );
+);
 
+// on cart change the sessionStorage is updated
 store.subscribe(()=>{
   sessionStorage.setItem('localCart', JSON.stringify(store.getState().cart))
 })

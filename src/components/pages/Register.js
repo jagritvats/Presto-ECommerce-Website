@@ -9,6 +9,7 @@ const Register = ({ setLogin }) => {
     var email = document.getElementById("remail").value;
     var password = document.getElementById("rpassword").value;
     var username = document.getElementById("rusername").value;
+
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
 
@@ -27,7 +28,6 @@ const Register = ({ setLogin }) => {
   
       })
       .catch((error) => {
-        var errorCode = error.code;
         var errorMessage = error.message;
         alert(errorMessage)
       });
