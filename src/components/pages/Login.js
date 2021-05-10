@@ -1,8 +1,9 @@
 import React from "react";
+import firebase from 'firebase'
 import loginImg from "../../images/account/login.svg";
 
 import {useDispatch} from 'react-redux'
-import {loadAuth} from '../../actions'
+import {loadAuth, loadedAuth} from '../../actions'
 
 
 export const Login = ({ setLogin }) => {
@@ -28,6 +29,7 @@ export const Login = ({ setLogin }) => {
       var errorMessage = error.message;
       console.log(errorMessage)
       alert("Enter Correct Details")
+      dispatch(loadedAuth())
     });
   }
 

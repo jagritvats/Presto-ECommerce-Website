@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Checkout.css'
 import Navbar from "../Navbar"
 import {useHistory} from 'react-router-dom'
@@ -13,10 +13,13 @@ function Checkout() {
 
   let auth = useSelector(state => state.auth);
 
-  if(!auth.isLoggedIn){
-    alert("Not Logged In")
-    history.push("/account")
-  }
+  useEffect(() => {
+    if(!auth.isLoggedIn){
+      alert("Not Logged In")
+      history.push("/account")
+    }
+  }, [auth])
+
 
   let price = 0;
 

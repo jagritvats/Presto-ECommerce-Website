@@ -1,4 +1,5 @@
 import React from "react";
+import firebase from 'firebase'
 // import loginImg from "../../images/account/login.svg";
 import registerImg from "../../images/account/register.svg";
 

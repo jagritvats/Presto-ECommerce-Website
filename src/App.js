@@ -17,8 +17,6 @@ import AuthChangeDetect from './components/functionality/AuthChangeDetect';
 
 function App() {
 
-
-
   return (
     <div className="App">
 
