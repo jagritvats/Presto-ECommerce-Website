@@ -53,7 +53,16 @@ function Checkout() {
                   console.log(minifiedOrders)
               
                   firebase.firestore().collection('orders').doc(auth.auth.uid).set({
-                    orders:[...corders,{products:[...minifiedOrders],orderId:1,deliveryDate:dateD,price:price.toFixed(2),numItems:minifiedOrders.length}]
+                    orders:[
+                      ...corders,
+                      {
+                        products:[...minifiedOrders],
+                        orderId:corders[corders.length-1].orderId+1,
+                        deliveryDate:dateD,
+                        price:price.toFixed(2),
+                        numItems:minifiedOrders.length
+                      }
+                    ]
                   })
                   
                   alert("Order Placed!")
