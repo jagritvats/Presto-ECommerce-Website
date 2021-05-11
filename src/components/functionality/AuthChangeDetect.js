@@ -36,25 +36,18 @@ function AuthChangeDetect() {
                 // get orders from firebase
                 dispatch(loadOrders)
                 firebase.firestore().collection('orders').doc(user.uid).get().then(doc=> {
-                    console.log(doc)
-                    console.log(doc.data())
                     if(doc.data()){
                         
                         dispatch(updateOrders(doc.data()))
                         dispatch(loadedOrders())
                     }else{
-                        console.log("no data online")
                         dispatch(loadedOrders())
                     }
                 });
 
                 firebase.firestore().collection('orders').doc(user.uid).onSnapshot(snapshot=>{
-                    console.log('snap')
-                    console.log(auth)
+
                     if(auth.isLoggedIn){
-                        
-                        console.log(snapshot)
-                        console.log(snapshot.data())
                         
                         if(snapshot.data()){
                             dispatch(updateOrders(snapshot.data()))
@@ -62,7 +55,6 @@ function AuthChangeDetect() {
                     }
                     
                 })
-                console.log("ll")
                 
             }
             else{
