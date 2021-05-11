@@ -6,7 +6,7 @@ import {addCart} from '../../actions'
 
 import {useDispatch} from 'react-redux'
 
-function Product({product}) {
+function Product({product,cart=true}) {
 
     const dispatch = useDispatch()
 
@@ -24,9 +24,15 @@ function Product({product}) {
                 <span className="numReviews">{product.numReviews}</span>
             </p>
             <p className="priceTag">$ {product.price.toFixed(2)}</p>
-            <button href="" className="btn" onClick={()=>{
-                dispatch(addCart(product))
-            }}>Add to cart</button>
+            {
+                cart?
+                    <button href="" className="btn" onClick={()=>{
+                        dispatch(addCart(product))
+                    }}>Add to cart</button>
+                :
+                ""
+            }
+            
         </div>
     )
 }

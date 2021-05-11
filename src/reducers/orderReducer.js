@@ -7,7 +7,7 @@ const orderReducer = (state=initorders,action)=>{
         case "ADD_ORDER":
             return {...state, orders:[...state.orders,action.payload.order]}
         case "REMOVE_ORDER":
-            return {...state, orders:[...state.filter(order=>order.orderId!=action.payload.id)]}
+            return {...state, orders:[...state.orders.filter(order=>order.orderId!=action.payload.id)]}
         case "LOAD_ORDERS":
             return {...state,isLoaded:false}
         case "LOADED_ORDERS":

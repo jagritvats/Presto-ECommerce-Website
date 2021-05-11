@@ -95,10 +95,10 @@ export const addOrder = (order) => {
     }
 }
 
-export const removeOrder = (prodId) => {
+export const removeOrder = (ordId) => {
     return{
         type:'REMOVE_ORDER',
-        payload:{id:prodId}
+        payload:{id:ordId}
     }
 }
 
