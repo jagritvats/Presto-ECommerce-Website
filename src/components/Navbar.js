@@ -9,10 +9,10 @@ import hamburger from "../images/nav/menu.svg"
 import saving from "../images/nav/savings.svg"
 import search from "../images/nav/search.svg"
 import cartimage from "../images/nav/cart.svg"
-import favorite from "../images/nav/favorite.svg"
 import account from "../images/nav/account.svg"
 import highlightOffWhite from "../images/nav/highlightOffWhite.svg"
 import person from '../images/others/person.svg'
+import orderWhiteIcon from "../images/nav/ordersWhite.svg"
 
 import SignOutButton from './layout/SignOutButton'
 
@@ -52,7 +52,10 @@ function Navbar() {
                             
                             {
                                 auth.isLoggedIn?
+                                <>
+                                    <li><img src={person}></img><Link to="/account">My Account</Link></li>
                                     <li><SignOutButton /></li>
+                                </>
                                 :
                                     <li><img src={person} alt="" /><Link to="account">Register/Login</Link></li>
                             }
@@ -79,7 +82,7 @@ function Navbar() {
 
             <section className="nav3">
                 <Link to="/account" className="display-flex mouse-pointer account"><img src={account} alt="" /><div>Account</div></Link>
-                <Link to="/orders" className="display-flex mouse-pointer fav"><img src={favorite} alt="" /><div>Orders</div></Link>
+                <Link to="/orders" className="display-flex mouse-pointer fav"><img src={orderWhiteIcon} alt="" /><div>Orders</div></Link>
                 <Link to="/cart" className="mouse-pointer display-flex">
                     <img src={cartimage} alt="" />
                     <div id="noOfProducts">{qty}</div>
