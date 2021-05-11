@@ -10,14 +10,7 @@ function Search() {
     
     let param = useParams();
     let str = param.query;
-    let [sProds,setsProds] = useState([]);
-
     let items = useSelector(state=>state.products.filter(product => product.name.toLowerCase().search(str.toLowerCase())>=0 ))
-
-    useEffect(()=>{
-        setsProds(items);
-        console.log(sProds)
-    },[str])
 
     let id = 1;
 
@@ -30,9 +23,9 @@ function Search() {
             }}>
 
                 {
-                    sProds.length>0
+                    items.length>0
                     ?
-                    sProds.map((product)=>(
+                    items.map((product)=>(
                         <Product product={product} key={id++} style = {{width:'25%'}}/>
                     ))
                     :
