@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useHistory } from 'react-router-dom'
 import './Navbar.css';
@@ -16,6 +16,8 @@ import orderWhiteIcon from "../images/nav/ordersWhite.svg"
 
 import SignOutButton from './layout/SignOutButton'
 
+import $ from 'jquery'
+
 function Navbar() {
 
     let history = useHistory();
@@ -29,19 +31,29 @@ function Navbar() {
     cart.forEach(cartItem => {
         qty += cartItem.quantity;
     });
+
+    useEffect(()=>{
+        $(".navigation a").click(()=>{
+
+                setshowMenu(false)
+
+        })
+    },[])
+    
+
     return (
         <nav className="navigation">
 
             <section className="nav1">
                 <img src={hamburger} onClick={() => setshowMenu(true)
-                } alt="menu" />
+                } alt="menu" className="menubtnOpen" />
                 <div className={showMenu ? 'show' : 'hide'}>{menuList.length && (
                     <section>
 
                         <ul className="menu-items">
                             <div className="top-ham">
-                                <img src={saving} alt="img"></img>
-                                <img src={highlightOffWhite} onClick={() => setshowMenu(false)
+                                <Link to="/"><img src={saving} alt="img"></img></Link>
+                                <img className="closeMenuBtn" src={highlightOffWhite} onClick={() => setshowMenu(false)
                                 } alt="menu" />
 
                             </div>
@@ -65,7 +77,7 @@ function Navbar() {
 
                 <div className="display-flex">
                     <div className="website-name"><Link to="/">Presto</Link></div>
-                    <img src={saving} alt="img"></img>
+                    <Link to="/"><img src={saving} alt="img"></img></Link>
                 </div>
             </section>
 
