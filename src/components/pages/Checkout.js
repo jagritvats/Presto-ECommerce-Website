@@ -57,7 +57,7 @@ function Checkout() {
                       ...corders,
                       {
                         products:[...minifiedOrders],
-                        orderId:corders[corders.length-1].orderId+1,
+                        orderId:corders.length>0?corders[corders.length-1].orderId+1:1,
                         deliveryDate:dateD,
                         price:price.toFixed(2),
                         numItems:minifiedOrders.length
