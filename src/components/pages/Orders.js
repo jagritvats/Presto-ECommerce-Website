@@ -5,7 +5,7 @@ import './Orders.css'
 
 import Product from '../layout/Product'
 import { removeOrder } from '../../actions';
-
+import firebase from 'firebase'
 function Orders() {
 
     let orders = useSelector(state=>state.orders)
@@ -61,8 +61,12 @@ function Orders() {
                                                             <button type="button" className="cancelBtn" onClick={()=>{
                                                                 let is = confirm("Are You sure you want to cancel this order?")
                                                                 if(is){
-
-                                                                    dispatch(removeOrder(order.orderId))
+                                                                    firebase.firestore().collection('orders').doc(auth.auth.uid).set({
+                                                                        orders:[
+                                                                          ...orders.orders.filter(ord=>ord.orderId!=order.orderId)
+                                                                        ]
+                                                                      })
+                                                                    // dispatch(removeOrder(order.orderId))
                                                                 }
                                                             }}>Cancel Order</button>
                                                     }
