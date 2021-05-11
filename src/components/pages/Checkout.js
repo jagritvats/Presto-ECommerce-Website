@@ -49,8 +49,6 @@ function Checkout() {
                       price:prod.price
                     }
                   ))
-
-                  console.log(minifiedOrders)
               
                   firebase.firestore().collection('orders').doc(auth.auth.uid).set({
                     orders:[

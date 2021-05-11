@@ -1,18 +1,14 @@
 import React from 'react'
-import {useSelector,useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import './Orders.css'
 
 import Product from '../layout/Product'
-import { removeOrder } from '../../actions';
 import firebase from 'firebase'
 function Orders() {
 
     let orders = useSelector(state=>state.orders)
-
-    let dispatch = useDispatch();
     let products = useSelector(state=>state.products)
-
     let auth = useSelector(state=>state.auth)
 
     let id = 0;
@@ -31,7 +27,6 @@ function Orders() {
                                 <div className="orders">
                                     {
                                         orders.orders.map((order)=>{
-                                            console.log(order)
 
                                             const dateValues = order.deliveryDate.split("-")
 
@@ -66,7 +61,6 @@ function Orders() {
                                                                           ...orders.orders.filter(ord=>ord.orderId!=order.orderId)
                                                                         ]
                                                                       })
-                                                                    // dispatch(removeOrder(order.orderId))
                                                                 }
                                                             }}>Cancel Order</button>
                                                     }
