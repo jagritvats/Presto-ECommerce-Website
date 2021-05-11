@@ -81,12 +81,17 @@
     }
     .navigation .nav3 *{
         margin-left: 0.5rem;
+        color: white;
     }
     
     /*Nav part 3 Over */
 
 .navigation .nav3 a div:hover{
     color: red;
+}
+
+.menubtnOpen:hover,.closeMenuBtn:hover{
+    cursor: pointer;
 }
 
 #noOfProducts{
@@ -160,6 +165,10 @@
 }
 .top-ham img{
     width: 2rem !important;
+}
+
+.display-flex .mouse-pointer .fav{
+    color:white;
 }
 
 @media screen and (max-width:768px){
