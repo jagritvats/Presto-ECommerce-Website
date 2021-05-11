@@ -90,6 +90,10 @@
     color: red;
 }
 
+.menubtnOpen:hover,.closeMenuBtn:hover{
+    cursor: pointer;
+}
+
 #noOfProducts{
     text-align: center;
     position: relative;
