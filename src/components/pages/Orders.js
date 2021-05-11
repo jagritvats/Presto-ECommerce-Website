@@ -59,7 +59,7 @@ function Orders() {
                                                             <p className="status">Delivered</p>
                                                         :
                                                             <button type="button" className="cancelBtn" onClick={()=>{
-                                                                let is = confirm("Are You sure you want to cancel this order?")
+                                                                let is = window.confirm("Are You sure you want to cancel this order?")
                                                                 if(is){
                                                                     firebase.firestore().collection('orders').doc(auth.auth.uid).set({
                                                                         orders:[
