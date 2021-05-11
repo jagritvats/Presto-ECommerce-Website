@@ -14,6 +14,7 @@ import Search from './components/Search';
 import ScrollToTop from './components/functionality/ScrollToTop'
 import Account from './components/pages/Account';
 import AuthChangeDetect from './components/functionality/AuthChangeDetect';
+import Orders from './components/pages/Orders';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/search/:query" component={Search} />
           <Route exact path="/account" component={Account} />
+          <Route exact path="/orders" component={Orders} />
           <Route> <div> <p>This page doesn't exist, you're lost :( , go back to hompage</p> </div> </Route>
         </Switch>
         <Footer />

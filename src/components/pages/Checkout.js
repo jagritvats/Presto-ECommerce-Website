@@ -1,8 +1,8 @@
 import React,{useEffect} from 'react'
 import './Checkout.css'
 import {useHistory} from 'react-router-dom'
-
-import {removeAll} from '../../actions'
+import firebase from 'firebase'
+import { removeAll, loadOrders, loadedOrders} from '../../actions'
 
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -16,12 +16,17 @@ function Checkout() {
 
   let auth = useSelector(state => state.auth);
 
+  let corders = useSelector(state => state.orders.orders)
+
   useEffect(() => {
     if(!auth.isLoggedIn){
       alert("Not Logged In")
       history.push("/account")
     }
   }, [auth])
+
+  var d = new Date();
+  var dateD = d.getDate() +"-" + (d.getMonth()+1) + "-"+ d.getFullYear();
 
 
   let price = 0;
@@ -36,6 +41,21 @@ function Checkout() {
         <div className="checkOutDetails">
           <form className="full-detail" onSubmit={(e)=>{
                   e.preventDefault()
+                  
+                  const minifiedOrders = cart.map(prod=>(
+                    {
+                      prodId:prod.prodId,
+                      quantity:prod.quantity,
+                      price:prod.price
+                    }
+                  ))
+
+                  console.log(minifiedOrders)
+              
+                  firebase.firestore().collection('orders').doc(auth.auth.uid).set({
+                    orders:[...corders,{products:[...minifiedOrders],orderId:1,deliveryDate:dateD,price:price.toFixed(2),numItems:minifiedOrders.length}]
+                  })
+                  
                   alert("Order Placed!")
                   dispatch(removeAll())
                   history.push("/")

@@ -79,7 +79,7 @@ function Navbar() {
 
             <section className="nav3">
                 <Link to="/account" className="display-flex mouse-pointer account"><img src={account} alt="" /><div>Account</div></Link>
-                <a className="display-flex mouse-pointer fav"><img src={favorite} alt="" /><div>My Items</div></a>
+                <Link to="/orders" className="display-flex mouse-pointer fav"><img src={favorite} alt="" /><div>Orders</div></Link>
                 <Link to="/cart" className="mouse-pointer display-flex">
                     <img src={cartimage} alt="" />
                     <div id="noOfProducts">{qty}</div>

@@ -162,6 +162,10 @@
     width: 2rem !important;
 }
 
+.display-flex .mouse-pointer .fav{
+    color:white;
+}
+
 @media screen and (max-width:768px){
     /* body{
       background: pink !important;

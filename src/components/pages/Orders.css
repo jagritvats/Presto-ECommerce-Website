@@ -1,0 +1,18 @@
+.orders{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.order{
+    border:1px solid black;
+}
+
+.productsOrder{
+    display: flex;
+}
+
+.productsOrder .product{
+    width: 20%;
+}
