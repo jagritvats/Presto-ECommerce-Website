@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Checkout from './components/pages/Checkout'
 
-import {HashRouter ,BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {HashRouter , Switch, Route} from 'react-router-dom';
 
 import ProductPage from './components/pages/ProductPage';
 import CategoryPage from './components/pages/CategoryPage';
