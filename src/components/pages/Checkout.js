@@ -26,6 +26,7 @@ function Checkout() {
   }, [auth])
 
   var d = new Date();
+  d.setDate(d.getDate() + 2);// date will be two days ahead
   var dateD = d.getDate() +"-" + (d.getMonth()+1) + "-"+ d.getFullYear();
 
 
