@@ -24,6 +24,10 @@
   /* font-family:BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif; */
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: "BogleWeb-Regular",sans-serif;
   padding-bottom: 2em;
