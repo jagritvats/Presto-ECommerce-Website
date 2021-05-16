@@ -46,11 +46,13 @@ function AuthChangeDetect() {
                     }
                 });
 
+                // firestore(database) changes event listner
                 firebase.firestore().collection('orders').doc(user.uid).onSnapshot(snapshot=>{
 
                     if(firebase.auth().currentUser){
                         
                         if(snapshot.data()){
+                            // updating orders on database changes
                             dispatch(updateOrders(snapshot.data()))
                         }
                     }
