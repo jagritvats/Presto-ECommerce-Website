@@ -1,12 +1,10 @@
 import React from 'react'
-import {useDispatch} from 'react-redux'
-import {lgout} from '../../actions'
+import firebase from 'firebase'
 
 function SignOutButton() {
-    let dispatch = useDispatch();
     return (
         <button className="signoutBtn" onClick={() => {
-            dispatch(lgout())
+            firebase.auth().signOut();
         }}>Sign Out</button>
     )
 }

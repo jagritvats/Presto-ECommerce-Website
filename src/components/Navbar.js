@@ -69,7 +69,7 @@ function Navbar() {
                                     <li><SignOutButton /></li>
                                 </>
                                 :
-                                    <li><img src={person} alt="" /><Link to="account">Register/Login</Link></li>
+                                    <li><img src={person} alt="" /><Link to="/account">Register/Login</Link></li>
                             }
                         </ul>
                     </section>
