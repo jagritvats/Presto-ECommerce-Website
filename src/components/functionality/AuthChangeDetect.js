@@ -2,15 +2,13 @@ import React from 'react'
 import firebase from 'firebase'
 import {useEffect} from 'react';
 
-import { useDispatch,useSelector} from 'react-redux'
-import { doLogin, loadedAuth, loadedOrders, loadOrders, updateOrders } from '../../actions'
+import { useDispatch} from 'react-redux'
+import { doLogin,doLogout, loadedAuth, loadedOrders, loadOrders, updateOrders,resetOrders } from '../../actions'
 
 function AuthChangeDetect() {
 
-    var auth = useSelector(state=>state.auth)
-
+    // initializing firebase
     useEffect(()=>{
-
         var firebaseConfig = {
           apiKey: "AIzaSyBqP8VkaO2hGReJvc6JGZnHcvzAIIycDd0",
           authDomain: "ecommerce-188e7.firebaseapp.com",
@@ -26,15 +24,18 @@ function AuthChangeDetect() {
 
     const dispatch = useDispatch();
 
+    // all auth and firebase change listeners
     useEffect(() => {
-        firebase.auth().onAuthStateChanged(user => {
-            if (user) {
-                
-                dispatch(doLogin(user))
-                auth={auth:user,isLoggedIn:true}
 
+        // on login/logout
+        firebase.auth().onAuthStateChanged(user => {
+
+            if (user) {
+                dispatch(doLogin(user))
                 // get orders from firebase
-                dispatch(loadOrders)
+                dispatch(loadOrders())
+
+                // on login getting initial data from firebase and updating the orders list
                 firebase.firestore().collection('orders').doc(user.uid).get().then(doc=> {
                     if(doc.data()){
                         
@@ -47,7 +48,7 @@ function AuthChangeDetect() {
 
                 firebase.firestore().collection('orders').doc(user.uid).onSnapshot(snapshot=>{
 
-                    if(auth.isLoggedIn){
+                    if(firebase.auth().currentUser){
                         
                         if(snapshot.data()){
                             dispatch(updateOrders(snapshot.data()))
@@ -58,8 +59,11 @@ function AuthChangeDetect() {
                 
             }
             else{
-                auth={auth:null,isLoggedIn:false}
+                // on logout
+                dispatch(doLogout());
+                dispatch(resetOrders())
             }
+            //auth status loaded
             dispatch(loadedAuth())
         })
 

@@ -26,7 +26,7 @@ function Checkout() {
   }, [auth])
 
   var d = new Date();
-  d.setDate(d.getDate() + 2);// date will be two days ahead
+  d.setDate(d.getDate() + 2);// date will be two days ahead(delivery time)
   var dateD = d.getDate() +"-" + (d.getMonth()+1) + "-"+ d.getFullYear();
 
 
@@ -65,8 +65,8 @@ function Checkout() {
                   })
                   
                   alert("Order Placed!")
-                  dispatch(removeAll())
-                  history.push("/")
+                  dispatch(removeAll()) //removing all items from cart after order placed
+                  history.push("/") // redirecting to homepage
                 }}>
             <div className="perso_pay">
               <div className="delivery">
