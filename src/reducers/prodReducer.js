@@ -1793,6 +1793,7 @@ const products = [
 ]
 
 const prodReducer = (state=products,action)=>{
+    // for future implementation
     switch(action.type){
         case "ADD_TO_CART_NOTIFY":
             return state
