@@ -1,6 +1,5 @@
 import React from "react";
 import firebase from 'firebase'
-// import loginImg from "../../images/account/login.svg";
 import registerImg from "../../images/account/register.svg";
 
 const Register = ({ setLogin }) => {
@@ -10,17 +9,16 @@ const Register = ({ setLogin }) => {
     var email = document.getElementById("remail").value;
     var password = document.getElementById("rpassword").value;
     var username = document.getElementById("rusername").value;
+
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
 
         var user = userCredential.user;
-        console.log(user)
 
         var user = firebase.auth().currentUser;
         user.updateProfile({
           displayName: username
         }).then(function() {
-          console.log("updated")
           alert("Registered!")
         }).catch(function(error) {
           alert("Error in Username")
@@ -28,7 +26,6 @@ const Register = ({ setLogin }) => {
   
       })
       .catch((error) => {
-        var errorCode = error.code;
         var errorMessage = error.message;
         alert(errorMessage)
       });

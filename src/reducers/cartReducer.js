@@ -22,8 +22,6 @@ const cartReducer = (state = initCart, action) => {
             return [...state, { ...action.payload.product, quantity: 1 }]
 
         case 'REMOVE_FROM_CART':
-            console.log("removing")
-            console.log(state)
             return [...state.filter(prod => prod.prodId != action.payload.id)]
 
         case 'REDUCE_BY_ONE':
@@ -37,7 +35,9 @@ const cartReducer = (state = initCart, action) => {
                         .concat(state.slice(i + 1))
                 }
             }
-
+        
+        case "REMOVE_ALL":
+            return []
         default:
             return state
     }

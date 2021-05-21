@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux'
 import CartItem from '../layout/CartItem';
 
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './Cart.css'
 
@@ -21,10 +21,6 @@ function Cart() {
         qty += cartItem.quantity;
         totalPrice += (cartItem.price * cartItem.quantity)
     });
-
-    useEffect(() => {
-
-    }, [cart])
 
     return (
         <div className="cartContainer">

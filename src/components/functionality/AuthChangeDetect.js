@@ -3,10 +3,11 @@ import firebase from 'firebase'
 import {useEffect} from 'react';
 
 import { useDispatch} from 'react-redux'
-import { doLogin, loadedAuth } from '../../actions'
+import { doLogin,doLogout, loadedAuth, loadedOrders, loadOrders, updateOrders,resetOrders } from '../../actions'
 
 function AuthChangeDetect() {
 
+    // initializing firebase
     useEffect(()=>{
         var firebaseConfig = {
           apiKey: "AIzaSyBqP8VkaO2hGReJvc6JGZnHcvzAIIycDd0",
@@ -19,21 +20,59 @@ function AuthChangeDetect() {
         };
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
-      },[])
+    },[])
 
     const dispatch = useDispatch();
 
+    // all auth and firebase change listeners
     useEffect(() => {
+
+        // on login/logout
         firebase.auth().onAuthStateChanged(user => {
-            console.log(user)
+
             if (user) {
-                
                 dispatch(doLogin(user))
+                // get orders from firebase
+                dispatch(loadOrders())
+
+                // on login getting initial data from firebase and updating the orders list
+                firebase.firestore().collection('orders').doc(user.uid).get().then(doc=> {
+                    if(doc.data()){
+                        
+                        dispatch(updateOrders(doc.data()))
+                        dispatch(loadedOrders())
+                    }else{
+                        dispatch(loadedOrders())
+                    }
+                });
+
+                // firestore(database) changes event listner
+                firebase.firestore().collection('orders').doc(user.uid).onSnapshot(snapshot=>{
+
+                    if(firebase.auth().currentUser){
+                        
+                        if(snapshot.data()){
+                            // updating orders on database changes
+                            dispatch(updateOrders(snapshot.data()))
+                        }
+                    }
+                    
+                })
                 
             }
+            else{
+                // on logout
+                dispatch(doLogout());
+                dispatch(resetOrders())
+            }
+            //auth status loaded
             dispatch(loadedAuth())
         })
+
+        
+        
     }, [])
+    
     return (
         <> 
         </>

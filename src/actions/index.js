@@ -1,4 +1,3 @@
-import firebase from 'firebase'
 
 export const addCart = (product) => {
     return {
@@ -51,17 +50,36 @@ export const loadedAuth = () => {
         type:'LOADED_AUTH'
     }
 }
+// remove all from cart
+export const removeAll = () => {
+    return {
+        type:"REMOVE_ALL"
+    }
+}
 
-export const lgout = () => {
-    return dispatch => {
-  
-      firebase.auth()
-        .signOut()
-        .then(res => {
-          dispatch(doLogout());
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    };
-  };
+export const resetOrders = () =>{
+    return {
+        type : "RESET"
+    }
+}
+
+
+//orders
+export const updateOrders = (orders) => {
+    return{
+        type:'UPDATE_ORDERS',
+        payload:{orders}
+    }
+}
+
+export const loadOrders = () => {
+    return{
+        type:'LOADING_ORDERS'
+    }
+}
+
+export const loadedOrders = () => {
+    return{
+        type:'LOADED_ORDERS'
+    }
+}

@@ -1,17 +1,22 @@
 import React,{useEffect} from 'react'
 import './Checkout.css'
-import Navbar from "../Navbar"
 import {useHistory} from 'react-router-dom'
+import firebase from 'firebase'
+import { removeAll, loadOrders, loadedOrders} from '../../actions'
 
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 function Checkout() {
 
   let history = useHistory();
 
+  let dispatch = useDispatch();
+
   const cart = useSelector(state => state.cart);
 
   let auth = useSelector(state => state.auth);
+
+  let corders = useSelector(state => state.orders.orders)
 
   useEffect(() => {
     if(!auth.isLoggedIn){
@@ -19,6 +24,10 @@ function Checkout() {
       history.push("/account")
     }
   }, [auth])
+
+  var d = new Date();
+  d.setDate(d.getDate() + 2);// date will be two days ahead(delivery time)
+  var dateD = d.getDate() +"-" + (d.getMonth()+1) + "-"+ d.getFullYear();
 
 
   let price = 0;
@@ -31,7 +40,34 @@ function Checkout() {
     <div>
       <div className="checkout">
         <div className="checkOutDetails">
-          <form className="full-detail">
+          <form className="full-detail" onSubmit={(e)=>{
+                  e.preventDefault()
+                  
+                  const minifiedOrders = cart.map(prod=>(
+                    {
+                      prodId:prod.prodId,
+                      quantity:prod.quantity,
+                      price:prod.price
+                    }
+                  ))
+              
+                  firebase.firestore().collection('orders').doc(auth.auth.uid).set({
+                    orders:[
+                      ...corders,
+                      {
+                        products:[...minifiedOrders],
+                        orderId:corders.length>0?corders[corders.length-1].orderId+1:1,
+                        deliveryDate:dateD,
+                        price:price.toFixed(2),
+                        numItems:minifiedOrders.length
+                      }
+                    ]
+                  })
+                  
+                  alert("Order Placed!")
+                  dispatch(removeAll()) //removing all items from cart after order placed
+                  history.push("/") // redirecting to homepage
+                }}>
             <div className="perso_pay">
               <div className="delivery">
                 <div className="delivery-top">
@@ -40,23 +76,23 @@ function Checkout() {
                 </div>
                 <div className="perso-details displayFlex">
                   <div className="personal__info displayFlexCol">
-                    <label> First name*: <input type="text" name="fname" required /> </label>
+                    <label> First name*: <input type="text" name="fname" defaultValue={auth.isLoggedIn?auth.auth.displayName:""} required /> </label>
                     <label> Last name *: <input type="text" name="lname" required /> </label>
                     <label> Phone Number *: <input type="number" name="pnumber" required max="9999999999" min="1000000000" /> </label>
-                    <label> Email Address *: <input type="email" name="email" required /> </label>
+                    <label> Email Address *: <input type="email" name="email" value={auth.isLoggedIn?auth.auth.email:""} required disabled/> </label>
                   </div>
                   <div className="address displayFlexCol">
                     <label> Street address*: <input type="text" name="streetadd" required /> </label>
                     <label> Landmark : <input type="text" name="landmark" /> </label>
                     <label> City*: <input type="text" name="city" required /> </label>
                     <div className="displayFlex" style={{ justifyContent: "space-between" }}>
-                      <label className="selectState">State :<select name="state" id="" >
+                      <label className="selectState">State :<select name="state" id="" defaultValue="6">
                         <option value="1">Andhra Pradesh</option>
                         <option value="2">Arunachal Pradesh</option>
                         <option value="3">Assam</option>
                         <option value="4">Bihar</option>
                         <option value="5">Chhattisgarh</option>
-                        <option value="6" selected>Goa</option>
+                        <option value="6">Goa</option>
                         <option value="7">Gujarat</option>
                         <option value="8">Haryana</option>
                         <option value="9">Himachal Pradesh</option>
@@ -146,7 +182,7 @@ function Checkout() {
               <div className="subtotal">
                 <div className="displayFlex">
                   <div>Subtotal</div>
-                  <div>${price}</div>
+                  <div>${price.toFixed(2)}</div>
                 </div>
                 <div className="displayFlex">
                   <div>Delivery</div>

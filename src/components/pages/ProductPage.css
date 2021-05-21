@@ -30,13 +30,9 @@
     gap:0.4em;
 }
 
-/* .qtyCont{
-
-} */
 
 .soldBy{
     padding: 1em 1em;
-    /* margin */
     border-top: 1px solid #e9eaea;
     border-bottom: 1px solid #e9eaea;
 }

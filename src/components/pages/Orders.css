@@ -1,0 +1,42 @@
+.orders{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.order{
+    border:1px solid black;
+}
+
+.productsOrder{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2em;
+    justify-content: center;
+}
+
+.productsOrder .product{
+    width: 18%;
+}
+
+.cancelBtn{
+    padding:0.4em 1em;
+    border: none;
+    background-color: rgb(235, 66, 0);
+    border-radius: 4px;
+    color:white;
+    margin: 1em;
+}
+
+.status{
+    padding-bottom: 1em;
+    color:rgb(0, 196, 0);
+}
+
+.cancelBtn{
+    cursor:pointer;
+}
+

@@ -15,19 +15,14 @@ export const Login = ({ setLogin }) => {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    console.log(email)
     dispatch(loadAuth())
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
-
-      var user = userCredential.user;
-      console.log(user)
-
+      //logged in
     })
     .catch((error) => {
 
       var errorMessage = error.message;
-      console.log(errorMessage)
       alert("Enter Correct Details")
       dispatch(loadedAuth())
     });
