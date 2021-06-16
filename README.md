@@ -1,5 +1,7 @@
 # ECommerce Website Project by Quad Squad (Group 16)
 
+Basic E-Commerce Website with cart and ordering (without payment) functionality
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
