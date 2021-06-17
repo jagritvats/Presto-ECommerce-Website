@@ -2,6 +2,8 @@
 
 Basic E-Commerce Website with cart and ordering (without payment) functionality
 
+https://prestoj.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
