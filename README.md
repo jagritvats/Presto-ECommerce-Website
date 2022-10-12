@@ -1,4 +1,4 @@
-# ECommerce Website Project by Quad Squad (Group 16)
+# ECommerce Website Project by Quad Squad 
 
 Basic E-Commerce Website with cart and ordering (without payment) functionality
 
